@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>프라임경영인증연구원 | PRIME MCI</title>
+<meta name="description" content="대표가 직접 설계하는 경영인증 밀착 컨설팅. 메인비즈 4건·이노비즈 2건·벤처 2건 실적. 첫 시도에 통과합니다." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#3182F6',
+          'brand-dark': '#1B64DA',
+          'brand-bg': '#E8F3FF',
+          'brand-soft': '#F1F8FF',
+          ink: '#191F28',
+          'ink-2': '#333D4B',
+          sub: '#6B7684',
+          sub2: '#8B95A1',
+          line: '#E5E8EB',
+          line2: '#F2F4F6',
+          bg: '#F9FAFB',
+          'bg-2': '#F2F4F6',
+          success: '#00C471',
+          warn: '#FF5F5F',
+          'yellow-soft': '#FFF8DC',
+        },
+        fontFamily: {
+          sans: ['"Pretendard Variable"', 'Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+        },
+        maxWidth: { content: '1200px' },
+        borderRadius: {
+          '4xl': '28px',
+          '5xl': '36px',
+        },
+        boxShadow: {
+          soft: '0 2px 12px rgba(0,0,0,.04)',
+          card: '0 4px 24px rgba(0,0,0,.05)',
+          floating: '0 8px 40px rgba(49,130,246,.25)',
+        },
+        fontSize: {
+          'hero': ['72px', { lineHeight: '1.15', letterSpacing: '-0.03em', fontWeight: '900' }],
+          'hero-lg': ['96px', { lineHeight: '1.08', letterSpacing: '-0.035em', fontWeight: '900' }],
+          'h1': ['48px', { lineHeight: '1.25', letterSpacing: '-0.025em', fontWeight: '800' }],
+          'h1-lg': ['64px', { lineHeight: '1.18', letterSpacing: '-0.03em', fontWeight: '800' }],
+          'h2': ['32px', { lineHeight: '1.3', letterSpacing: '-0.02em', fontWeight: '700' }],
+          'h2-lg': ['40px', { lineHeight: '1.25', letterSpacing: '-0.02em', fontWeight: '700' }],
+          'h3': ['24px', { lineHeight: '1.35', letterSpacing: '-0.015em', fontWeight: '700' }],
+          'body-lg': ['20px', { lineHeight: '1.65', fontWeight: '400' }],
+          'body': ['18px', { lineHeight: '1.7', fontWeight: '400' }],
+          'body-sm': ['16px', { lineHeight: '1.6', fontWeight: '400' }],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #191F28;
+    letter-spacing: -0.01em;
+  }
+  .page { display: none; }
+  .page.active { display: block; animation: fadeIn .22s ease-out; }
+  @keyframes fadeIn { from{opacity:.4; transform: translateY(4px)} to{opacity:1; transform:none} }
+
+  .nav-item { position: relative; }
+  .nav-item:hover .nav-menu { display: block; }
+  .nav-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 6px; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #E8F3FF; color: #3182F6;
+    padding: 8px 14px; border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+  }
+  .chip-gray { background: #F2F4F6; color: #4E5968; }
+  .chip-success { background: #E6F9F1; color: #00A25A; }
+
+  .btn-primary {
+    background: #3182F6; color: #fff; font-weight: 700;
+    padding: 18px 28px; border-radius: 14px;
+    transition: transform .1s, background .15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: #1B64DA; transform: translateY(-1px); }
+  .btn-ghost {
+    background: #F2F4F6; color: #191F28; font-weight: 700;
+    padding: 18px 28px; border-radius: 14px;
+    transition: background .15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-ghost:hover { background: #E5E8EB; }
+
+  .gradient-bg {
+    background:
+      radial-gradient(1000px 500px at 80% -10%, rgba(49,130,246,.18), transparent 60%),
+      radial-gradient(800px 400px at -10% 30%, rgba(49,130,246,.08), transparent 60%),
+      linear-gradient(180deg, #F9FAFB, #F1F8FF 60%, #F9FAFB);
+  }
+
+  details[open] > summary .chev { transform: rotate(180deg); }
+  .chev { transition: transform .18s; }
+
+  .card-hover { transition: transform .18s, box-shadow .18s, border-color .15s; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.06); border-color: #CBD5E1; }
+
+  ::selection { background: #3182F6; color: #fff; }
+
+  /* Custom checkbox/radio */
+  input[type="checkbox"]:checked { accent-color: #3182F6; }
+
+  /* Table */
+  .tbl-clean th, .tbl-clean td { padding: 18px 20px; }
+</style>
+</head>
+<body class="bg-white text-ink">
+
+<!-- ============== HEADER ============== -->
+<header class="fixed top-0 inset-x-0 bg-white/90 backdrop-blur-lg border-b border-line2 z-50">
+  <nav class="max-w-content mx-auto px-6 h-[72px] flex items-center justify-between">
+    <a onclick="go('home')" class="flex items-center gap-2.5 cursor-pointer">
+      <div class="w-10 h-10 bg-brand rounded-xl grid place-items-center">
+        <span class="text-white font-black text-xl leading-none">P</span>
+      </div>
+      <div class="flex flex-col leading-tight">
+        <span class="font-extrabold text-ink text-[17px] tracking-tight">프라임경영인증연구원</span>
+        <span class="text-[11px] tracking-[.18em] text-sub font-semibold">PRIME MCI</span>
+      </div>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-1 text-[15px] font-semibold text-ink-2">
+      <li class="nav-item">
+        <a class="px-4 py-5 cursor-pointer hover:text-brand transition">회사소개</a>
+        <ul class="nav-menu bg-white border border-line2 shadow-card min-w-[200px] rounded-2xl overflow-hidden">
+          <li><a onclick="go('greeting')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">인사말</a></li>
+          <li><a onclick="go('brand')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">브랜드스토리</a></li>
+          <li><a onclick="go('ceo')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">대표 프로필</a></li>
+          <li><a onclick="go('location')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">오시는 길</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="px-4 py-5 cursor-pointer hover:text-brand transition">컨설팅 분야</a>
+        <ul class="nav-menu bg-white border border-line2 shadow-card min-w-[240px] rounded-2xl overflow-hidden">
+          <li class="px-5 py-2 text-[11px] font-extrabold text-brand tracking-widest bg-brand-soft">기업인증</li>
+          <li><a onclick="go('mainbiz')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">메인비즈</a></li>
+          <li><a onclick="go('inobiz')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">이노비즈</a></li>
+          <li><a onclick="go('venture')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">벤처기업확인</a></li>
+          <li><a onclick="go('direct')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">직접생산확인</a></li>
+          <li><a onclick="go('rnddept')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">연구개발전담부서</a></li>
+          <li><a onclick="go('rndlab')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">기업부설연구소</a></li>
+          <li class="px-5 py-2 text-[11px] font-extrabold text-brand tracking-widest bg-brand-soft border-t border-line2">ISO 인증</li>
+          <li><a onclick="go('iso9001')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">ISO 9001 품질경영</a></li>
+          <li><a onclick="go('iso14001')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">ISO 14001 환경경영</a></li>
+          <li><a onclick="go('iso45001')" class="block px-5 py-3 hover:bg-brand-soft cursor-pointer">ISO 45001 안전보건</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="px-4 py-5 cursor-pointer hover:text-brand transition">실적 & 후기</a>
+        <ul class="nav-menu bg-white border border-line2 shadow-card min-w-[200px] rounded-2xl overflow-hidden">
+          <li><a onclick="go('portfolio')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">컨설팅 실적</a></li>
+          <li><a onclick="go('review')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">고객 후기</a></li>
+          <li><a onclick="go('news')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">인증 소식</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="px-4 py-5 cursor-pointer hover:text-brand transition">고객지원</a>
+        <ul class="nav-menu bg-white border border-line2 shadow-card min-w-[200px] rounded-2xl overflow-hidden">
+          <li><a onclick="go('contact')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">상담문의</a></li>
+          <li><a onclick="go('faq')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">자주 묻는 질문</a></li>
+          <li><a onclick="go('notice')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">공지사항</a></li>
+          <li><a onclick="go('download')" class="block px-5 py-3.5 hover:bg-brand-soft cursor-pointer">회사소개서 다운로드</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <a onclick="go('contact')" class="hidden md:inline-flex items-center gap-1.5 bg-brand hover:bg-brand-dark text-white font-bold px-5 py-3 rounded-xl text-[15px] cursor-pointer transition">
+      무료 상담 →
+    </a>
+  </nav>
+</header>
+
+<main class="pt-[72px]">
+
+<!-- ============== 01. HOME ============== -->
+<section id="home" class="page active">
+
+  <!-- Hero -->
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-24 pb-32 lg:pt-32 lg:pb-40">
+      <div class="chip mb-8">
+        <span class="w-2 h-2 bg-brand rounded-full"></span>
+        <span>2026년 개원 · 대표 직접 수행 인증 누적 8건</span>
+      </div>
+      <h1 class="text-[42px] lg:text-[76px] font-black leading-[1.1] tracking-[-0.035em] text-ink mb-8">
+        기업인증·ISO 심사에<br/>
+        <span class="text-brand">월 수백만원 고정비</span>,<br/>
+        더는 내지 마세요.
+      </h1>
+      <p class="text-xl lg:text-2xl text-ink-2 leading-relaxed mb-12 max-w-3xl">
+        전문 심사위원 상주 고용 없이, <b class="text-ink">외주화로 비용·시간 절감</b>.<br/>
+        <b class="text-ink">메인비즈 · 이노비즈 · 벤처기업확인</b>,<br/>
+        <b class="text-ink">ISO 9001 · 14001 · 45001</b> 대표 직접 수행.<br/>
+        <span class="text-sub text-lg">누적 8건 실적 · 첫 시도 통과 · 불합격 시 무료 보완</span>
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a onclick="go('contact')" class="btn-primary text-lg cursor-pointer shadow-floating">무료 상담 신청하기 →</a>
+        <a onclick="go('download')" class="btn-ghost text-lg cursor-pointer">회사소개서 받기</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Prime: Pain vs Solution -->
+  <div class="bg-white py-24 lg:py-32">
+    <div class="max-w-content mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="chip mb-5"><span>● WHY PRIME</span></div>
+        <h2 class="text-h1 lg:text-h1-lg">아직도 이렇게<br/>해결하고 계신가요?</h2>
+        <p class="text-body-lg text-sub mt-5">인증 비용 구조를 다시 생각할 때입니다.</p>
+      </div>
+
+      <!-- 절감액 하이라이트 (먼저) -->
+      <div class="max-w-5xl mx-auto mb-6 bg-ink text-white rounded-4xl p-10 lg:p-14 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 85% 30%, rgba(49,130,246,.9), transparent 60%);"></div>
+        <div class="relative grid md:grid-cols-5 gap-10 items-center">
+          <div class="md:col-span-3">
+            <div class="chip mb-5" style="background: rgba(49,130,246,.25); color: #60A5FA;"><span>💰 연간 예상 절감액</span></div>
+            <h3 class="text-[48px] lg:text-[80px] font-black tracking-[-0.03em] leading-[1.02]">
+              연 <span class="text-brand">3,600만원</span>+<br/>절감
+            </h3>
+            <p class="text-white/70 mt-5 text-base lg:text-lg">심사위원 상주 고용 vs 외주 프로젝트 컨설팅 기준.<br/>기업 규모·인증 건수에 따라 차등 적용.</p>
+          </div>
+          <div class="md:col-span-2 grid grid-cols-2 gap-3">
+            <div class="bg-white/5 rounded-2xl p-6 text-center">
+              <div class="text-xs text-white/50 mb-2 font-semibold">기존 연간</div>
+              <div class="text-[22px] font-black text-white/50 line-through leading-none">3,600<br/>~7,200</div>
+              <div class="text-xs text-white/40 mt-2">만원</div>
+            </div>
+            <div class="bg-brand/20 rounded-2xl p-6 text-center border border-brand/30">
+              <div class="text-xs text-brand mb-2 font-semibold">프라임</div>
+              <div class="text-[22px] font-black leading-none">수백만</div>
+              <div class="text-xs text-brand mt-2">단발 프로젝트</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 상세 병렬 대조 -->
+      <div class="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+        <div class="bg-bg rounded-4xl p-10">
+          <div class="chip chip-gray mb-6">❌ 기존 방식</div>
+          <h3 class="text-h3 text-sub mb-2 line-through">내부 전담팀 운영</h3>
+          <p class="text-sm text-sub mb-8">고정비 + 장기 소요 + 매몰 리스크</p>
+          <ul class="space-y-5">
+            <li class="flex gap-3 items-start"><span class="w-7 h-7 bg-warn/15 text-warn rounded-lg grid place-items-center text-sm font-bold flex-shrink-0">✕</span><div><b class="text-ink-2 text-base">심사위원 상주 고용</b><div class="text-sm text-sub mt-1">월 300~600만원 고정 인건비</div></div></li>
+            <li class="flex gap-3 items-start"><span class="w-7 h-7 bg-warn/15 text-warn rounded-lg grid place-items-center text-sm font-bold flex-shrink-0">✕</span><div><b class="text-ink-2 text-base">TF 구성 · 장기 준비</b><div class="text-sm text-sub mt-1">3~6개월 소요 · 본업 집중도↓</div></div></li>
+            <li class="flex gap-3 items-start"><span class="w-7 h-7 bg-warn/15 text-warn rounded-lg grid place-items-center text-sm font-bold flex-shrink-0">✕</span><div><b class="text-ink-2 text-base">불합격 시 비용 매몰</b><div class="text-sm text-sub mt-1">재도전 시 전액 추가 부담</div></div></li>
+            <li class="flex gap-3 items-start"><span class="w-7 h-7 bg-warn/15 text-warn rounded-lg grid place-items-center text-sm font-bold flex-shrink-0">✕</span><div><b class="text-ink-2 text-base">갱신마다 반복</b><div class="text-sm text-sub mt-1">3년 주기 같은 부담 재발생</div></div></li>
+          </ul>
+        </div>
+        <div class="bg-brand text-white rounded-4xl p-10 relative overflow-hidden shadow-floating">
+          <div class="absolute inset-0 opacity-15" style="background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.4), transparent 50%);"></div>
+          <div class="relative">
+            <div class="chip mb-6" style="background: rgba(255,255,255,.22); color: white;">✓ 프라임 방식</div>
+            <h3 class="text-h3 mb-2">외주 밀착 컨설팅</h3>
+            <p class="text-sm text-white/80 mb-8">고정비 0원 · 실패 없는 1회 통과</p>
+            <ul class="space-y-5">
+              <li class="flex gap-3 items-start"><span class="w-7 h-7 bg-white/25 text-white rounded-lg grid place-items-center text-sm font-bold flex-shrink-0">✓</span><div><b class="text-base">고정비 0원 · 프로젝트 단위</b><div class="text-sm text-white/80 mt-1">필요할 때만, 끝나면 종료</div></div></li>
+              <li class="flex gap-3 items-start"><span class="w-7 h-7 bg-white/25 text-white rounded-lg grid place-items-center text-sm font-bold flex-shrink-0">✓</span><div><b class="text-base">대표 1:1 밀착 · 3주~1개월</b><div class="text-sm text-white/80 mt-1">본업 방해 없이 진행</div></div></li>
+              <li class="flex gap-3 items-start"><span class="w-7 h-7 bg-white/25 text-white rounded-lg grid place-items-center text-sm font-bold flex-shrink-0">✓</span><div><b class="text-base">불합격 시 무료 보완·재심사</b><div class="text-sm text-white/80 mt-1">추가 비용 청구 없음</div></div></li>
+              <li class="flex gap-3 items-start"><span class="w-7 h-7 bg-white/25 text-white rounded-lg grid place-items-center text-sm font-bold flex-shrink-0">✓</span><div><b class="text-base">선금 50 / 잔금 50 정찰제</b><div class="text-sm text-white/80 mt-1">중도금·숨은 비용 없음</div></div></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 실적 숫자 -->
+  <div class="bg-white border-y border-line2">
+    <div class="max-w-content mx-auto px-6 py-16 lg:py-24">
+      <div class="text-center mb-12">
+        <div class="chip chip-gray mb-5"><span>PERFORMANCE</span></div>
+        <h2 class="text-h1 lg:text-h1-lg">숫자로 증명합니다</h2>
+        <p class="text-body text-sub mt-4">대표 김지훈이 직접 수행한 인증 실적입니다.</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div class="bg-bg rounded-3xl p-8 lg:p-10 text-center">
+          <div class="text-[64px] lg:text-[88px] font-black leading-none text-brand tracking-tighter">4</div>
+          <div class="text-lg font-bold text-ink mt-4">메인비즈</div>
+          <div class="text-sm text-sub mt-1">누적 인증 건수</div>
+        </div>
+        <div class="bg-bg rounded-3xl p-8 lg:p-10 text-center">
+          <div class="text-[64px] lg:text-[88px] font-black leading-none text-brand tracking-tighter">2</div>
+          <div class="text-lg font-bold text-ink mt-4">이노비즈</div>
+          <div class="text-sm text-sub mt-1">누적 인증 건수</div>
+        </div>
+        <div class="bg-bg rounded-3xl p-8 lg:p-10 text-center">
+          <div class="text-[64px] lg:text-[88px] font-black leading-none text-brand tracking-tighter">2</div>
+          <div class="text-lg font-bold text-ink mt-4">벤처기업</div>
+          <div class="text-sm text-sub mt-1">누적 확인 건수</div>
+        </div>
+        <div class="bg-brand rounded-3xl p-8 lg:p-10 text-center text-white">
+          <div class="text-[64px] lg:text-[88px] font-black leading-none tracking-tighter">1<span class="text-[40px] lg:text-[56px]">회</span></div>
+          <div class="text-lg font-bold mt-4">1회 통과</div>
+          <div class="text-sm text-white/80 mt-1">달성 원칙</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 서비스 그리드 -->
+  <div class="bg-bg py-24 lg:py-32">
+    <div class="max-w-content mx-auto px-6">
+      <div class="mb-16">
+        <div class="chip mb-5"><span>CONSULTING</span></div>
+        <h2 class="text-h1 lg:text-h1-lg mb-4">컨설팅 분야</h2>
+        <p class="text-body-lg text-sub">경영인증 6종 + ISO 3종, 좁고 깊게 특화합니다.</p>
+      </div>
+
+      <h3 class="text-h3 mb-6 flex items-center gap-3"><span class="w-1.5 h-6 bg-brand rounded-full"></span>기업인증</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-14">
+        <a onclick="go('mainbiz')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-brand-bg text-brand rounded-2xl grid place-items-center text-xl font-black mb-6">MB</div>
+          <div class="font-extrabold text-ink text-xl mb-2">메인비즈</div>
+          <div class="text-sub text-base">경영혁신형 중소기업</div>
+          <div class="mt-6 text-sm text-brand font-bold">대표 수행 4건 →</div>
+        </a>
+        <a onclick="go('inobiz')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-brand-bg text-brand rounded-2xl grid place-items-center text-xl font-black mb-6">IB</div>
+          <div class="font-extrabold text-ink text-xl mb-2">이노비즈</div>
+          <div class="text-sub text-base">기술혁신형 중소기업</div>
+          <div class="mt-6 text-sm text-brand font-bold">대표 수행 2건 →</div>
+        </a>
+        <a onclick="go('venture')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-brand-bg text-brand rounded-2xl grid place-items-center text-xl font-black mb-6">VT</div>
+          <div class="font-extrabold text-ink text-xl mb-2">벤처기업확인</div>
+          <div class="text-sub text-base">유형 3종 대응</div>
+          <div class="mt-6 text-sm text-brand font-bold">대표 수행 2건 →</div>
+        </a>
+        <a onclick="go('direct')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-brand-bg text-brand rounded-2xl grid place-items-center text-xl font-black mb-6">DP</div>
+          <div class="font-extrabold text-ink text-xl mb-2">직접생산확인</div>
+          <div class="text-sub text-base">공공조달 필수 요건</div>
+          <div class="mt-6 text-sm text-brand font-bold">자세히 보기 →</div>
+        </a>
+        <a onclick="go('rnddept')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-brand-bg text-brand rounded-2xl grid place-items-center text-xl font-black mb-6">RD</div>
+          <div class="font-extrabold text-ink text-xl mb-2">연구개발전담부서</div>
+          <div class="text-sub text-base">세액공제 · 인력 우대</div>
+          <div class="mt-6 text-sm text-brand font-bold">자세히 보기 →</div>
+        </a>
+        <a onclick="go('rndlab')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-brand-bg text-brand rounded-2xl grid place-items-center text-xl font-black mb-6">RL</div>
+          <div class="font-extrabold text-ink text-xl mb-2">기업부설연구소</div>
+          <div class="text-sub text-base">R&D 세제 최대 혜택</div>
+          <div class="mt-6 text-sm text-brand font-bold">자세히 보기 →</div>
+        </a>
+      </div>
+
+      <h3 class="text-h3 mb-6 flex items-center gap-3"><span class="w-1.5 h-6 bg-brand rounded-full"></span>ISO 인증</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a onclick="go('iso9001')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-ink text-white rounded-2xl grid place-items-center text-lg font-black mb-6">9K</div>
+          <div class="font-extrabold text-ink text-xl mb-2">ISO 9001</div>
+          <div class="text-sub text-base">품질경영시스템</div>
+        </a>
+        <a onclick="go('iso14001')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-ink text-white rounded-2xl grid place-items-center text-lg font-black mb-6">14K</div>
+          <div class="font-extrabold text-ink text-xl mb-2">ISO 14001</div>
+          <div class="text-sub text-base">환경경영시스템</div>
+        </a>
+        <a onclick="go('iso45001')" class="card-hover bg-white border border-line2 rounded-3xl p-8 cursor-pointer">
+          <div class="w-14 h-14 bg-ink text-white rounded-2xl grid place-items-center text-lg font-black mb-6">45K</div>
+          <div class="font-extrabold text-ink text-xl mb-2">ISO 45001</div>
+          <div class="text-sub text-base">안전보건경영시스템</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6단계 프로세스 -->
+  <div class="bg-white py-24 lg:py-32">
+    <div class="max-w-content mx-auto px-6">
+      <div class="mb-16">
+        <div class="chip mb-5"><span>PROCESS</span></div>
+        <h2 class="text-h1 lg:text-h1-lg mb-4">투명한 6단계 프로세스</h2>
+        <p class="text-body-lg text-sub">선금 50% / 잔금 50%. 중도금 없습니다.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="bg-bg rounded-3xl p-7">
+          <div class="text-sm font-extrabold text-brand mb-6">01</div>
+          <div class="text-xl font-extrabold mb-2">의뢰</div>
+          <div class="text-sm text-sub">1일 이내 접수</div>
+        </div>
+        <div class="bg-bg rounded-3xl p-7">
+          <div class="text-sm font-extrabold text-brand mb-6">02</div>
+          <div class="text-xl font-extrabold mb-2">상담</div>
+          <div class="text-sm text-sub">대표 직접 1~2일</div>
+        </div>
+        <div class="bg-bg rounded-3xl p-7">
+          <div class="text-sm font-extrabold text-brand mb-6">03</div>
+          <div class="text-xl font-extrabold mb-2">견적</div>
+          <div class="text-sm text-sub">당일 서면 발송</div>
+        </div>
+        <div class="bg-brand text-white rounded-3xl p-7">
+          <div class="text-sm font-extrabold text-white/70 mb-6">04</div>
+          <div class="text-xl font-extrabold mb-2">계약</div>
+          <div class="text-sm text-white/80">선금 50%</div>
+        </div>
+        <div class="bg-bg rounded-3xl p-7">
+          <div class="text-sm font-extrabold text-brand mb-6">05</div>
+          <div class="text-xl font-extrabold mb-2">실사·심사</div>
+          <div class="text-sm text-sub">자가진단+현장</div>
+        </div>
+        <div class="bg-brand text-white rounded-3xl p-7">
+          <div class="text-sm font-extrabold text-white/70 mb-6">06</div>
+          <div class="text-xl font-extrabold mb-2">발급</div>
+          <div class="text-sm text-white/80">잔금 50%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3가지 약속 -->
+  <div class="bg-bg py-24 lg:py-32">
+    <div class="max-w-content mx-auto px-6">
+      <div class="mb-16">
+        <div class="chip mb-5"><span>PROMISE</span></div>
+        <h2 class="text-h1 lg:text-h1-lg mb-4">프라임의 3가지 약속</h2>
+        <p class="text-body-lg text-sub">말이 아닌 계약서로 남깁니다.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-white rounded-4xl p-10">
+          <div class="w-16 h-16 bg-brand-bg rounded-2xl grid place-items-center mb-8">
+            <span class="text-brand text-3xl font-black">01</span>
+          </div>
+          <h3 class="text-h3 mb-3">대표가 직접 맡습니다</h3>
+          <p class="text-base text-sub leading-relaxed">상담·설계·실사까지 영업사원 없이 대표 김지훈이 직접. 외주·아웃소싱 없음.</p>
+        </div>
+        <div class="bg-white rounded-4xl p-10">
+          <div class="w-16 h-16 bg-brand-bg rounded-2xl grid place-items-center mb-8">
+            <span class="text-brand text-3xl font-black">02</span>
+          </div>
+          <h3 class="text-h3 mb-3">불합격 시 무료 보완</h3>
+          <p class="text-base text-sub leading-relaxed">자가진단·현장실사 불합격 시 보완 재심사 추가 비용 없음. 발급까지 책임.</p>
+        </div>
+        <div class="bg-white rounded-4xl p-10">
+          <div class="w-16 h-16 bg-brand-bg rounded-2xl grid place-items-center mb-8">
+            <span class="text-brand text-3xl font-black">03</span>
+          </div>
+          <h3 class="text-h3 mb-3">정찰제 투명 견적</h3>
+          <p class="text-base text-sub leading-relaxed">선금 50% / 잔금 50% 고정 구조. 중도금·기타 청구 없음. 계약서에 명시.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 후기 -->
+  <div class="bg-white py-24 lg:py-32">
+    <div class="max-w-content mx-auto px-6">
+      <div class="flex items-end justify-between mb-16 flex-wrap gap-4">
+        <div>
+          <div class="chip mb-5"><span>REVIEW</span></div>
+          <h2 class="text-h1 lg:text-h1-lg">고객이 먼저 말합니다</h2>
+        </div>
+        <a onclick="go('review')" class="text-base font-bold text-brand hover:text-brand-dark cursor-pointer">전체 후기 보기 →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-bg rounded-4xl p-10">
+          <div class="text-2xl mb-6">⭐️⭐️⭐️⭐️⭐️</div>
+          <blockquote class="text-lg font-bold text-ink leading-[1.65] mb-8">"자가진단부터 서류까지 하나하나 직접 챙겨주셔서 첫 시도에 통과했습니다."</blockquote>
+          <div class="flex items-center gap-3">
+            <span class="chip">메인비즈</span>
+            <span class="text-sm text-sub">㈜OO제조 · 경기</span>
+          </div>
+        </div>
+        <div class="bg-bg rounded-4xl p-10">
+          <div class="text-2xl mb-6">⭐️⭐️⭐️⭐️⭐️</div>
+          <blockquote class="text-lg font-bold text-ink leading-[1.65] mb-8">"대표님이 실사 당일 직접 와주셔서 불안했던 심사가 오히려 여유있게 끝났습니다."</blockquote>
+          <div class="flex items-center gap-3">
+            <span class="chip">이노비즈</span>
+            <span class="text-sm text-sub">㈜OO소프트 · 서울</span>
+          </div>
+        </div>
+        <div class="bg-bg rounded-4xl p-10">
+          <div class="text-2xl mb-6">⭐️⭐️⭐️⭐️⭐️</div>
+          <blockquote class="text-lg font-bold text-ink leading-[1.65] mb-8">"잔금 구조가 명확해서 처음부터 끝까지 믿을 수 있었어요. 추가 비용 청구 없음."</blockquote>
+          <div class="flex items-center gap-3">
+            <span class="chip">벤처확인</span>
+            <span class="text-sm text-sub">㈜OO테크 · 성남</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 하단 CTA -->
+  <div class="bg-brand relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,.3), transparent 50%), radial-gradient(circle at 80% 80%, rgba(255,255,255,.2), transparent 50%);"></div>
+    <div class="relative max-w-content mx-auto px-6 py-24 lg:py-32 text-center text-white">
+      <h2 class="text-h1 lg:text-h1-lg mb-6">지금 바로<br class="md:hidden"/> 인증 일정을 확인하세요</h2>
+      <p class="text-body-lg text-white/90 mb-12 max-w-2xl mx-auto">대표가 영업일 기준 24시간 안에 직접 연락드립니다.<br/>첫 상담은 무료입니다.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a onclick="go('contact')" class="bg-white hover:bg-bg text-brand font-extrabold text-lg px-8 py-5 rounded-2xl cursor-pointer transition">📝 온라인 상담 신청</a>
+        <a class="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold text-lg px-8 py-5 rounded-2xl cursor-pointer transition backdrop-blur">📞 02-XXXX-XXXX</a>
+        <a class="bg-[#FAE100] hover:brightness-95 text-[#3C1E1E] font-extrabold text-lg px-8 py-5 rounded-2xl cursor-pointer transition">💬 카카오톡 상담</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SUB PAGE HEADER TEMPLATE ============== -->
+<!-- 02. 인사말 -->
+<section id="greeting" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">ABOUT · GREETING</div>
+      <h1 class="text-h1 lg:text-h1-lg">인사말</h1>
+      <p class="text-sub mt-3">HOME · 회사소개 · 인사말</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 lg:py-32 grid lg:grid-cols-5 gap-12 lg:gap-20">
+    <div class="lg:col-span-2">
+      <div class="aspect-[3/4] bg-brand-bg rounded-4xl grid place-items-center">
+        <div class="text-center opacity-70">
+          <div class="text-[140px] font-black text-brand/30 leading-none">P</div>
+          <div class="text-sub text-base mt-4 font-semibold">대표 사진 영역</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-3">
+      <div class="chip mb-6"><span>CEO MESSAGE</span></div>
+      <h2 class="text-[32px] lg:text-[52px] font-extrabold leading-[1.2] tracking-tight mb-10">
+        "인증은 서류가 아닙니다.<br/>
+        <span class="text-brand">기업의 체질을 설계하는 일</span>입니다."
+      </h2>
+      <div class="space-y-6 text-body-lg leading-[1.85] text-ink-2">
+        <p>안녕하십니까, <b class="text-ink">프라임경영인증연구원</b> 대표 <b class="text-ink">김지훈</b>입니다.</p>
+        <p>인증은 단순히 서류를 제출하고 도장을 받는 절차가 아닙니다. 기업의 현재를 점검하고, 앞으로의 성장 방향을 설계하는 일입니다. 지난 N년 간 <b class="text-ink">메인비즈 4건, 이노비즈 2건, 벤처기업 2건</b>의 인증을 직접 수행해오며, 한 건의 인증이 한 기업의 체질을 얼마나 바꾸는지 곁에서 지켜봤습니다.</p>
+        <p>프라임은 <b class="text-ink">영업사원 없이 대표가 직접 상담·설계·실사 대응까지 맡는 밀착 컨설팅</b>을 고집합니다. 빠른 회전보다, 확실한 통과와 대표님의 실익을 우선합니다.</p>
+        <p><b class="text-ink">첫 시도에 통과하는 인증</b>, 프라임이 함께 만들겠습니다.</p>
+      </div>
+      <div class="mt-12 pt-8 border-t border-line">
+        <div class="text-sub text-base">대표이사</div>
+        <div class="text-[32px] font-extrabold text-ink mt-1 tracking-tight">김지훈 <span class="text-brand text-xl">(인)</span></div>
+      </div>
+      <div class="mt-10 flex gap-3 flex-wrap">
+        <a onclick="go('ceo')" class="btn-ghost cursor-pointer">대표 상세 프로필 →</a>
+        <a onclick="go('contact')" class="btn-primary cursor-pointer">무료 상담 신청</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03. 브랜드스토리 -->
+<section id="brand" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">ABOUT · BRAND STORY</div>
+      <h1 class="text-h1 lg:text-h1-lg">브랜드스토리</h1>
+      <p class="text-sub mt-3">HOME · 회사소개 · 브랜드스토리</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 space-y-24">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="chip mb-6">BRAND NAME</div>
+        <h2 class="text-[40px] lg:text-[56px] font-extrabold tracking-tight leading-[1.15] mb-6">PRIME<br/>의 의미</h2>
+        <p class="text-body-lg text-ink-2 leading-[1.8]">
+          <b class="text-ink">Prime</b> — 최상급, 핵심, 근본.<br/>
+          경영인증의 가장 <span class="bg-brand-bg text-brand px-2 rounded">본질적인 성공</span>을 설계합니다.
+        </p>
+        <p class="text-sub mt-6 leading-relaxed text-base">
+          수많은 인증을 넓게 다루는 백화점식 컨설팅이 아닌, 중소기업의 <b class="text-ink">실질적 성장</b>을 가장 빠르게 끌어낼 핵심 인증에 집중합니다.
+        </p>
+      </div>
+      <div class="bg-brand aspect-square rounded-5xl grid place-items-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20" style="background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.4), transparent 50%)"></div>
+        <div class="text-center relative">
+          <div class="text-[240px] font-black text-white leading-none tracking-tighter">P</div>
+          <div class="text-white/80 tracking-[.3em] text-base mt-4 font-bold">PRIME MCI</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="bg-bg rounded-4xl p-10 lg:p-12">
+        <div class="chip mb-5">MISSION</div>
+        <h3 class="text-h2 mb-6">미션</h3>
+        <p class="text-body-lg text-ink-2 leading-relaxed">중소기업·스타트업의 인증 취득을 <b class="text-ink">실패 없이 완성</b>한다.</p>
+      </div>
+      <div class="bg-bg rounded-4xl p-10 lg:p-12">
+        <div class="chip mb-5">VISION</div>
+        <h3 class="text-h2 mb-6">비전</h3>
+        <p class="text-body-lg text-ink-2 leading-relaxed">국내 1위 <b class="text-ink">기업인증 밀착 컨설팅 파트너</b>로 자리잡는다.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="chip mb-5">CORE VALUES</div>
+      <h3 class="text-h1 lg:text-h1-lg mb-12">핵심 가치 3</h3>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-ink text-white rounded-4xl p-10">
+          <div class="text-brand text-6xl font-black mb-5">正</div>
+          <div class="text-2xl font-extrabold mb-3">정직</div>
+          <p class="text-white/70 leading-relaxed">불가능한 일은 처음부터 맡지 않습니다. 예상 가능 여부를 먼저 알려드립니다.</p>
+        </div>
+        <div class="bg-ink text-white rounded-4xl p-10">
+          <div class="text-brand text-6xl font-black mb-5">深</div>
+          <div class="text-2xl font-extrabold mb-3">집중</div>
+          <p class="text-white/70 leading-relaxed">서비스를 넓히지 않습니다. 경영인증 6종 + ISO 3종에만 집중합니다.</p>
+        </div>
+        <div class="bg-ink text-white rounded-4xl p-10">
+          <div class="text-brand text-6xl font-black mb-5">責</div>
+          <div class="text-2xl font-extrabold mb-3">책임</div>
+          <p class="text-white/70 leading-relaxed">인증서가 발급되기 전까지 포기하지 않습니다. 불합격도 함께 보완합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="chip mb-5">HISTORY</div>
+      <h3 class="text-h1 lg:text-h1-lg mb-12">연혁</h3>
+      <div class="space-y-2">
+        <div class="flex gap-8 items-start bg-bg rounded-3xl p-8">
+          <div class="w-32 flex-shrink-0">
+            <div class="text-brand text-xl font-extrabold">2026.05</div>
+          </div>
+          <div>
+            <div class="text-xl font-extrabold">프라임경영인증연구원 설립</div>
+            <div class="text-sub mt-2">대표 김지훈 창립 · 서울</div>
+          </div>
+        </div>
+        <div class="flex gap-8 items-start p-8">
+          <div class="w-32 flex-shrink-0">
+            <div class="text-sub text-xl font-bold">향후</div>
+          </div>
+          <div class="text-sub">주요 성과·이정표가 이곳에 축적됩니다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04. 대표 프로필 -->
+<section id="ceo" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">ABOUT · CEO</div>
+      <h1 class="text-h1 lg:text-h1-lg">대표 프로필</h1>
+      <p class="text-sub mt-3">HOME · 회사소개 · 대표 프로필</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24">
+    <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 mb-16">
+      <div class="lg:col-span-2">
+        <div class="aspect-[3/4] bg-brand rounded-4xl grid place-items-center mb-5 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-15" style="background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.5), transparent 50%)"></div>
+          <div class="text-center relative">
+            <div class="text-[160px] font-black text-white/30 leading-none">金</div>
+            <div class="text-white/80 text-base mt-3 font-semibold">대표 프로필 사진</div>
+          </div>
+        </div>
+        <div class="bg-bg rounded-3xl p-6">
+          <div class="text-xs font-extrabold text-sub tracking-widest mb-3">CONTACT</div>
+          <div class="space-y-2 text-base font-semibold">
+            <div>📧 ceo@primemci.co.kr <span class="text-sub font-normal">(TBD)</span></div>
+            <div>📞 010-XXXX-XXXX <span class="text-sub font-normal">(TBD)</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="chip mb-5">CEO · 대표이사</div>
+        <h2 class="text-[48px] lg:text-[72px] font-black leading-none tracking-tight">김지훈</h2>
+        <div class="text-2xl text-sub mt-3 font-semibold">Kim Ji-hoon</div>
+
+        <blockquote class="bg-brand-bg rounded-3xl p-8 my-10 text-xl font-bold text-brand-dark leading-[1.65]">
+          "상담부터 발급까지 제가 직접 맡습니다.<br/>영업사원·외주 없습니다."
+        </blockquote>
+
+        <div class="mb-10">
+          <div class="text-xs font-extrabold text-sub tracking-widest mb-4">전문 분야</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-ink text-white text-sm font-bold px-4 py-2 rounded-full">메인비즈</span>
+            <span class="bg-ink text-white text-sm font-bold px-4 py-2 rounded-full">이노비즈</span>
+            <span class="bg-ink text-white text-sm font-bold px-4 py-2 rounded-full">벤처기업확인</span>
+            <span class="bg-ink text-white text-sm font-bold px-4 py-2 rounded-full">직접생산확인</span>
+            <span class="bg-ink text-white text-sm font-bold px-4 py-2 rounded-full">기업부설연구소</span>
+            <span class="bg-brand text-white text-sm font-bold px-4 py-2 rounded-full">ISO 9001</span>
+            <span class="bg-brand text-white text-sm font-bold px-4 py-2 rounded-full">ISO 14001</span>
+            <span class="bg-brand text-white text-sm font-bold px-4 py-2 rounded-full">ISO 45001</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-extrabold text-sub tracking-widest mb-4">수행 실적 · 누적 8건</div>
+          <div class="bg-bg rounded-3xl overflow-hidden">
+            <table class="w-full">
+              <thead>
+                <tr class="text-left text-sm font-bold text-sub">
+                  <th class="px-6 py-4">인증 종류</th>
+                  <th class="px-6 py-4 text-center">건수</th>
+                  <th class="px-6 py-4">대표 업종</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white">
+                <tr class="border-t border-line2"><td class="px-6 py-5 font-bold text-lg">메인비즈</td><td class="px-6 py-5 text-center font-black text-3xl text-brand">4</td><td class="px-6 py-5 text-sub">제조·유통</td></tr>
+                <tr class="border-t border-line2"><td class="px-6 py-5 font-bold text-lg">이노비즈</td><td class="px-6 py-5 text-center font-black text-3xl text-brand">2</td><td class="px-6 py-5 text-sub">기술·서비스</td></tr>
+                <tr class="border-t border-line2"><td class="px-6 py-5 font-bold text-lg">벤처기업확인</td><td class="px-6 py-5 text-center font-black text-3xl text-brand">2</td><td class="px-6 py-5 text-sub">ICT·스타트업</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="bg-bg rounded-3xl p-8">
+        <div class="text-xs font-extrabold text-sub tracking-widest mb-3">학력</div>
+        <div class="text-sub text-lg">TBD · 추후 업데이트</div>
+      </div>
+      <div class="bg-bg rounded-3xl p-8">
+        <div class="text-xs font-extrabold text-sub tracking-widest mb-3">주요 경력</div>
+        <div class="text-sub text-lg">TBD · 추후 업데이트</div>
+      </div>
+      <div class="bg-bg rounded-3xl p-8">
+        <div class="text-xs font-extrabold text-sub tracking-widest mb-3">보유 자격</div>
+        <div class="text-sub text-lg">TBD · 추후 업데이트</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05. 오시는 길 -->
+<section id="location" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">ABOUT · LOCATION</div>
+      <h1 class="text-h1 lg:text-h1-lg">오시는 길</h1>
+      <p class="text-sub mt-3">HOME · 회사소개 · 오시는 길</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24">
+    <div class="aspect-[16/7] bg-brand-bg rounded-4xl grid place-items-center mb-8 overflow-hidden relative">
+      <div class="text-center relative z-10">
+        <div class="text-6xl mb-4">🗺️</div>
+        <div class="font-bold text-lg text-ink-2">지도 영역</div>
+        <div class="text-sub text-sm mt-1">카카오맵 / 네이버지도 임베드 예정</div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="bg-bg rounded-3xl p-10">
+        <div class="chip mb-5">본사</div>
+        <div class="space-y-5 text-lg">
+          <div><div class="text-xs font-extrabold text-sub tracking-widest mb-1">주소</div><div class="font-semibold">TBD · 추후 확정</div></div>
+          <div><div class="text-xs font-extrabold text-sub tracking-widest mb-1">전화</div><div class="font-semibold">TBD</div></div>
+          <div><div class="text-xs font-extrabold text-sub tracking-widest mb-1">이메일</div><div class="font-semibold">contact@primemci.co.kr</div></div>
+          <div><div class="text-xs font-extrabold text-sub tracking-widest mb-1">영업시간</div><div class="font-semibold">평일 09:00 ~ 18:00</div><div class="text-sub text-sm">점심 12:30 ~ 13:30</div></div>
+        </div>
+      </div>
+      <div class="bg-bg rounded-3xl p-10">
+        <div class="chip mb-5">교통 안내</div>
+        <div class="space-y-5 text-lg">
+          <div class="flex items-start gap-4"><span class="text-2xl">🚇</span><div><div class="font-bold">지하철</div><div class="text-sub">TBD</div></div></div>
+          <div class="flex items-start gap-4"><span class="text-2xl">🚌</span><div><div class="font-bold">버스</div><div class="text-sub">TBD</div></div></div>
+          <div class="flex items-start gap-4"><span class="text-2xl">🚗</span><div><div class="font-bold">자차</div><div class="text-sub">건물 내 방문 주차 가능 (TBD)</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06. 메인비즈 -->
+<section id="mainbiz" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · 기업인증</div>
+      <h1 class="text-h1 lg:text-h1-lg">메인비즈 <span class="text-sub">MAIN-BIZ</span></h1>
+      <p class="text-body-lg text-sub mt-4">경영혁신형 중소기업 인증 · 대표 수행 <b class="text-brand">4건</b></p>
+    </div>
+  </div>
+
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-16">
+      <div>
+        <h2 class="text-h2 mb-6">메인비즈란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          중소벤처기업부로부터 <b class="text-ink">경영혁신형 중소기업</b>으로 인정받은 기업입니다. 제품·공정 중심 기술혁신이 아닌 <b class="text-ink">마케팅·조직혁신 등 비기술 분야의 경영혁신형 중소기업</b>을 육성하기 위해 중소기업기술혁신촉진법 제15조 3항에 근거하여 운영되는 제도입니다.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-h2 mb-6">인증 대상</h2>
+        <div class="bg-bg rounded-3xl p-8">
+          <p class="text-body-lg font-bold mb-4">중소기업기본법 제2조에 의한 중소기업 중 <span class="text-brand">업력 3년 이상</span>인 기업</p>
+          <div class="text-base text-sub">
+            <div class="font-bold text-ink mt-4 mb-2">※ 신청 불가 업종·상태</div>
+            <ul class="space-y-1.5 pl-5 list-disc">
+              <li>게임·도박·사행성·불건전 소비 업종</li>
+              <li>국세 체납, 어음교환소 거래정지 기업</li>
+              <li>파산·회생절차 진행 중인 기업</li>
+              <li>부채비율 1,000% 이상 또는 완전 자본잠식 상태</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-h2 mb-6">혜택·지원</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-bg rounded-3xl p-7">
+            <div class="text-3xl mb-3">💰</div>
+            <div class="font-extrabold text-xl mb-3">금융·세제</div>
+            <ul class="text-base text-sub space-y-1.5 leading-relaxed">
+              <li>· 신보 보증료율 0.1%p 차감</li>
+              <li>· 은행 금리·기보 보증료 우대</li>
+              <li>· 정기 세무·관세 조사 유예</li>
+            </ul>
+          </div>
+          <div class="bg-bg rounded-3xl p-7">
+            <div class="text-3xl mb-3">🔬</div>
+            <div class="font-extrabold text-xl mb-3">R&D</div>
+            <ul class="text-base text-sub space-y-1.5 leading-relaxed">
+              <li>· 해외원천기술 상용화·산학연</li>
+              <li>· 스마트 제조혁신 사업</li>
+              <li>· 구매조건부 신제품개발</li>
+            </ul>
+          </div>
+          <div class="bg-bg rounded-3xl p-7">
+            <div class="text-3xl mb-3">👥</div>
+            <div class="font-extrabold text-xl mb-3">인력</div>
+            <ul class="text-base text-sub space-y-1.5 leading-relaxed">
+              <li>· 공공연 연구인력 파견</li>
+              <li>· 일학습병행제</li>
+              <li>· 병역특례 지원</li>
+            </ul>
+          </div>
+          <div class="bg-bg rounded-3xl p-7">
+            <div class="text-3xl mb-3">🛒</div>
+            <div class="font-extrabold text-xl mb-3">판로·수출</div>
+            <ul class="text-base text-sub space-y-1.5 leading-relaxed">
+              <li>· 글로벌 강소기업 육성</li>
+              <li>· 공영쇼핑 입점</li>
+              <li>· 수출인큐베이터·수출바우처</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-h2 mb-6">인증 절차 <span class="text-sub text-xl font-bold">· 3주~1개월</span></h2>
+        <ol class="space-y-3">
+          <li class="bg-bg rounded-3xl p-6 flex gap-5 items-start"><div class="w-10 h-10 bg-brand text-white rounded-2xl grid place-items-center font-black flex-shrink-0">1</div><div><div class="text-lg font-bold">기업등록 (온라인)</div><div class="text-sub mt-1">기본·공장·생산품·재무정보 입력</div></div></li>
+          <li class="bg-bg rounded-3xl p-6 flex gap-5 items-start"><div class="w-10 h-10 bg-brand text-white rounded-2xl grid place-items-center font-black flex-shrink-0">2</div><div><div class="text-lg font-bold">온라인 자가진단</div><div class="text-sub mt-1">1,000점 만점 중 <b class="text-brand">600점 이상</b> 통과</div></div></li>
+          <li class="bg-bg rounded-3xl p-6 flex gap-5 items-start"><div class="w-10 h-10 bg-brand text-white rounded-2xl grid place-items-center font-black flex-shrink-0">3</div><div><div class="text-lg font-bold">현장평가 신청</div><div class="text-sub mt-1">신청 55만원 / 갱신 44만원 (VAT 포함)</div></div></li>
+          <li class="bg-bg rounded-3xl p-6 flex gap-5 items-start"><div class="w-10 h-10 bg-brand text-white rounded-2xl grid place-items-center font-black flex-shrink-0">4</div><div><div class="text-lg font-bold">현장평가 실시</div><div class="text-sub mt-1"><b class="text-brand">700점 이상</b> + 신용등급 B 이상</div></div></li>
+          <li class="bg-bg rounded-3xl p-6 flex gap-5 items-start"><div class="w-10 h-10 bg-brand text-white rounded-2xl grid place-items-center font-black flex-shrink-0">5</div><div><div class="text-lg font-bold">확인서 발급</div><div class="text-sub mt-1">지방중소벤처기업청 우편 송부</div></div></li>
+          <li class="bg-bg rounded-3xl p-6 flex gap-5 items-start"><div class="w-10 h-10 bg-brand text-white rounded-2xl grid place-items-center font-black flex-shrink-0">6</div><div><div class="text-lg font-bold">사후관리 · 갱신</div><div class="text-sub mt-1">유효기간 3년. 만료 90일~30일 전 확인연장</div></div></li>
+        </ol>
+      </div>
+
+      <div class="bg-ink text-white rounded-4xl p-10 lg:p-12">
+        <div class="chip mb-6" style="background: rgba(49,130,246,.2); color: #60A5FA;">PRIME CONSULTING</div>
+        <h2 class="text-h2 text-white mb-8">프라임의 컨설팅 범위 · 5단계</h2>
+        <div class="space-y-3">
+          <div class="bg-white/5 p-5 rounded-2xl text-lg"><b class="text-brand">① 업체 사전 진단</b> · 인증 적합성·예상 점수 선진단</div>
+          <div class="bg-white/5 p-5 rounded-2xl text-lg"><b class="text-brand">② 온라인 등록 대행</b> · 기업·재무 정보 입력 전 과정 지원</div>
+          <div class="bg-white/5 p-5 rounded-2xl text-lg"><b class="text-brand">③ 자가진단 600+ 설계</b> · 질문별 근거 문서 매칭</div>
+          <div class="bg-white/5 p-5 rounded-2xl text-lg"><b class="text-brand">④ 현장심사 서류 준비</b> · 경영·조직·마케팅 문서 정비</div>
+          <div class="bg-white/5 p-5 rounded-2xl text-lg"><b class="text-brand">⑤ 현장심사 밀착 대응</b> · 당일 대표 동석 대응</div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-h2 mb-6">자주 묻는 질문</h2>
+        <div class="space-y-3">
+          <details class="bg-bg rounded-3xl p-7 group">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center gap-4"><span>Q. 업력 3년이 안 되는데 신청 가능한가요?</span><span class="chev text-brand font-black">▼</span></summary>
+            <p class="text-sub mt-4 leading-relaxed text-base">원칙적으로 불가합니다. 다만 <b class="text-ink">벤처기업 확인</b>은 업력 제한이 없으니 함께 검토드립니다.</p>
+          </details>
+          <details class="bg-bg rounded-3xl p-7">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center gap-4"><span>Q. 자가진단 점수가 낮게 나오면요?</span><span class="chev text-brand font-black">▼</span></summary>
+            <p class="text-sub mt-4 leading-relaxed text-base">사전 진단 단계에서 예상 점수를 먼저 산출합니다. 600점에 미달하면 <b class="text-ink">선제적 체질 개선</b>을 안내드리고, 단기 통과가 어렵다고 판단되면 다음 해 준비로 권유드립니다.</p>
+          </details>
+          <details class="bg-bg rounded-3xl p-7">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center gap-4"><span>Q. 불합격 시 어떻게 되나요?</span><span class="chev text-brand font-black">▼</span></summary>
+            <p class="text-sub mt-4 leading-relaxed text-base">프라임은 <b class="text-ink">불합격 시 무료 보완·재심사 대응</b>을 보장합니다. 추가 비용 청구 없음. 계약서에 명시됩니다.</p>
+          </details>
+          <details class="bg-bg rounded-3xl p-7">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center gap-4"><span>Q. 컨설팅 비용은 얼마인가요?</span><span class="chev text-brand font-black">▼</span></summary>
+            <p class="text-sub mt-4 leading-relaxed text-base">기업 규모·업종·준비도에 따라 달라지므로 <b class="text-ink">무료 상담 후 서면 견적</b>으로 안내드립니다. 정부 평가비(55만원)는 별도입니다.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-xs font-extrabold tracking-widest text-white/80">FREE CONSULTING</div>
+        <div class="text-3xl font-black mt-3 leading-tight">무료 상담<br/>24시간 이내 연락</div>
+        <a onclick="go('contact')" class="mt-8 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청하기 →</a>
+      </div>
+      <div class="bg-bg rounded-3xl p-7">
+        <div class="text-xs font-extrabold text-sub tracking-widest mb-4">핵심 정보 요약</div>
+        <div class="space-y-3 text-base">
+          <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">유효기간</span><b>3년</b></div>
+          <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">처리 기간</span><b>3주~1개월</b></div>
+          <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">자가진단</span><b>600점 이상</b></div>
+          <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">현장평가</span><b>700점 이상</b></div>
+          <div class="flex justify-between"><span class="text-sub">평가비용</span><b>55만원</b></div>
+        </div>
+      </div>
+      <div class="bg-ink text-white rounded-3xl p-7">
+        <div class="text-xs font-extrabold text-brand tracking-widest mb-4">필요 서류 요약</div>
+        <ul class="text-base text-white/80 space-y-2 leading-relaxed">
+          <li>· 사업자등록증 사본</li>
+          <li>· 법인등본 (1개월내)</li>
+          <li>· 최근 3년 재무제표</li>
+          <li>· 경영계획서 · QC 지침</li>
+          <li>· 조직도 · 업무분장표</li>
+          <li>· 마케팅·경쟁사 분석</li>
+        </ul>
+        <div class="text-sm text-white/50 mt-4">※ 전체 체크리스트는 상담 시 제공</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 07. 이노비즈 -->
+<section id="inobiz" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · 기업인증</div>
+      <h1 class="text-h1 lg:text-h1-lg">이노비즈 <span class="text-sub">INNO-BIZ</span></h1>
+      <p class="text-body-lg text-sub mt-4">기술혁신형 중소기업 인증 · 대표 수행 <b class="text-brand">2건</b></p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-14">
+      <div>
+        <h2 class="text-h2 mb-6">이노비즈란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          <b class="text-ink">기술혁신형 중소기업(Inno-Biz)</b> — 기술 우위 경쟁력을 갖춘 중소기업을 선정·지원하는 제도. 기술보증기금이 평가기관이며, 기술성·사업성·경영능력을 종합 평가합니다.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">대상</h2>
+        <div class="bg-bg rounded-3xl p-8 text-body-lg font-semibold">
+          업력 3년 이상 중소기업 · 기술력 평가 <span class="text-brand">650점 이상</span> 통과
+        </div>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">핵심 혜택</h2>
+        <ul class="grid md:grid-cols-2 gap-3">
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">💰</span>기보 보증비율 100% · 보증료율 0.3%p 감면</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🔬</span>R&D 과제 가점 · 기술평가보증</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🛒</span>공공조달·혁신제품 가점</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">👥</span>병역특례 편입 배정 우대</li>
+        </ul>
+      </div>
+      <div class="bg-ink text-white rounded-4xl p-10">
+        <div class="chip mb-5" style="background: rgba(49,130,246,.2); color: #60A5FA;">PRIME</div>
+        <h3 class="text-h3 text-white mb-5">컨설팅 범위</h3>
+        <div class="space-y-2 text-base">
+          <div class="bg-white/5 p-4 rounded-xl">① 기술 우위 포지셔닝 재정의</div>
+          <div class="bg-white/5 p-4 rounded-xl">② 기술평가 지표별 자료 매칭</div>
+          <div class="bg-white/5 p-4 rounded-xl">③ 온라인 자가진단 650+ 설계</div>
+          <div class="bg-white/5 p-4 rounded-xl">④ 기보 현장평가 대응 준비</div>
+          <div class="bg-white/5 p-4 rounded-xl">⑤ 평가 당일 대표 밀착 대응</div>
+        </div>
+      </div>
+    </div>
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-3xl font-black">무료 상담</div>
+        <a onclick="go('contact')" class="mt-6 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청 →</a>
+      </div>
+      <div class="bg-bg rounded-3xl p-7 text-base space-y-3">
+        <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">유효기간</span><b>3년</b></div>
+        <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">평가기관</span><b>기보</b></div>
+        <div class="flex justify-between"><span class="text-sub">통과 점수</span><b>650점 이상</b></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 08. 벤처기업확인 -->
+<section id="venture" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · 기업인증</div>
+      <h1 class="text-h1 lg:text-h1-lg">벤처기업확인</h1>
+      <p class="text-body-lg text-sub mt-4">벤처확인 3유형 대응 · 대표 수행 <b class="text-brand">2건</b></p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-14">
+      <div>
+        <h2 class="text-h2 mb-6">벤처기업확인이란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          벤처기업법에 따라 <b class="text-ink">기술성·혁신성·성장성</b>을 갖춘 기업을 확인·지원하는 제도. 2021년 민간 주도 확인제로 전환되어, 벤처투자·연구개발·혁신성장 3종으로 나뉘어 평가됩니다.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">확인 유형 3종</h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-bg rounded-3xl p-7">
+            <div class="text-brand text-xs font-extrabold tracking-widest mb-2">TYPE 1</div>
+            <div class="font-extrabold text-lg mb-2">벤처투자유형</div>
+            <div class="text-sub text-sm leading-relaxed">벤처캐피털로부터 5천만원 이상 투자 유치</div>
+          </div>
+          <div class="bg-bg rounded-3xl p-7">
+            <div class="text-brand text-xs font-extrabold tracking-widest mb-2">TYPE 2</div>
+            <div class="font-extrabold text-lg mb-2">연구개발유형</div>
+            <div class="text-sub text-sm leading-relaxed">기업부설연구소 보유 + R&D 비율 5%</div>
+          </div>
+          <div class="bg-bg rounded-3xl p-7">
+            <div class="text-brand text-xs font-extrabold tracking-widest mb-2">TYPE 3</div>
+            <div class="font-extrabold text-lg mb-2">혁신성장유형</div>
+            <div class="text-sub text-sm leading-relaxed">기술성·사업성 우수 평가 통과</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">핵심 혜택</h2>
+        <ul class="grid md:grid-cols-2 gap-3">
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">💰</span>법인세 50% 감면 (최초 5년)</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">👥</span>스톡옵션 부여 확대</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🛒</span>정부·공공조달 가점</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🏦</span>코스닥 상장 심사 특례</li>
+        </ul>
+      </div>
+    </div>
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-3xl font-black">무료 상담</div>
+        <a onclick="go('contact')" class="mt-6 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청 →</a>
+      </div>
+      <div class="bg-bg rounded-3xl p-7 text-base space-y-3">
+        <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">유효기간</span><b>3년</b></div>
+        <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">확인기관</span><b>벤처기업협회</b></div>
+        <div class="flex justify-between"><span class="text-sub">유형</span><b>3종</b></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 09. 직접생산확인 -->
+<section id="direct" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · 기업인증</div>
+      <h1 class="text-h1 lg:text-h1-lg">직접생산확인</h1>
+      <p class="text-body-lg text-sub mt-4">공공조달 참여 필수 요건</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-14">
+      <div>
+        <h2 class="text-h2 mb-6">직접생산확인이란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          중소기업자간 경쟁제품을 <b class="text-ink">실제 직접 생산하는지 확인</b>받는 제도. 공공조달 참여(나라장터)에 필수. 중소기업중앙회가 발급합니다.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">주요 요건</h2>
+        <ul class="space-y-3 text-body-lg">
+          <li class="bg-bg rounded-2xl p-5">· 자체 공장 보유 + 필수 생산설비 구비</li>
+          <li class="bg-bg rounded-2xl p-5">· 직접 고용 생산 인력</li>
+          <li class="bg-bg rounded-2xl p-5">· 생산 공정 핵심 단계 자체 수행</li>
+        </ul>
+      </div>
+      <div class="bg-ink text-white rounded-4xl p-10">
+        <div class="chip mb-5" style="background: rgba(49,130,246,.2); color: #60A5FA;">PRIME</div>
+        <h3 class="text-h3 text-white mb-5">컨설팅 포인트</h3>
+        <div class="space-y-2 text-base">
+          <div class="bg-white/5 p-4 rounded-xl">① 품목별 직접생산 기준 적합성 진단</div>
+          <div class="bg-white/5 p-4 rounded-xl">② 공장·설비·인력 현황 자료화</div>
+          <div class="bg-white/5 p-4 rounded-xl">③ 공정 체크리스트 정비</div>
+          <div class="bg-white/5 p-4 rounded-xl">④ 현장실사 대응 · 동석</div>
+        </div>
+      </div>
+    </div>
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-3xl font-black">무료 상담</div>
+        <a onclick="go('contact')" class="mt-6 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청 →</a>
+      </div>
+      <div class="bg-bg rounded-3xl p-7 text-base space-y-3">
+        <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">유효기간</span><b>2년</b></div>
+        <div class="flex justify-between"><span class="text-sub">발급기관</span><b>중기중앙회</b></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 10. 연구개발전담부서 -->
+<section id="rnddept" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · 기업인증</div>
+      <h1 class="text-h1 lg:text-h1-lg">연구개발전담부서</h1>
+      <p class="text-body-lg text-sub mt-4">R&D 세제 우대 · 인력 보조 확대</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-14">
+      <div>
+        <h2 class="text-h2 mb-6">전담부서란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          기업부설연구소보다 요건이 낮은 <b class="text-ink">R&D 조직 인정 제도</b>. 소기업 기준 전담 연구원 1명 이상이면 신청 가능. 한국산업기술진흥협회가 관리합니다.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">인정 요건 · 기업 규모별</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-bg rounded-3xl p-7"><div class="text-brand text-xs font-extrabold tracking-widest mb-2">소기업</div><div class="text-2xl font-black">연구전담 <span class="text-brand">1명</span> 이상</div></div>
+          <div class="bg-bg rounded-3xl p-7"><div class="text-brand text-xs font-extrabold tracking-widest mb-2">중기업</div><div class="text-2xl font-black">연구전담 <span class="text-brand">2명</span> 이상</div></div>
+          <div class="bg-bg rounded-3xl p-7"><div class="text-brand text-xs font-extrabold tracking-widest mb-2">중견기업</div><div class="text-2xl font-black">연구전담 <span class="text-brand">3명</span> 이상</div></div>
+          <div class="bg-bg rounded-3xl p-7"><div class="text-brand text-xs font-extrabold tracking-widest mb-2">대기업</div><div class="text-2xl font-black">연구전담 <span class="text-brand">5명</span> 이상</div></div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">핵심 혜택</h2>
+        <ul class="grid md:grid-cols-2 gap-3">
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">💰</span>연구·인력개발비 세액공제</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">👥</span>병역특례 전문연구요원</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🔬</span>R&D 사업 신청 요건 충족</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">📊</span>벤처확인 연구개발유형 연결</li>
+        </ul>
+      </div>
+    </div>
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-3xl font-black">무료 상담</div>
+        <a onclick="go('contact')" class="mt-6 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청 →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 11. 기업부설연구소 -->
+<section id="rndlab" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · 기업인증</div>
+      <h1 class="text-h1 lg:text-h1-lg">기업부설연구소</h1>
+      <p class="text-body-lg text-sub mt-4">R&D 세제 혜택 최상급</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-14">
+      <div>
+        <h2 class="text-h2 mb-6">기업부설연구소란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          기초연구진흥 및 기술개발지원에 관한 법률에 따른 <b class="text-ink">기업 R&D 조직 인정 제도</b>. 전담부서보다 높은 요건을 충족하면 세제·인력 혜택이 확대됩니다.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">인정 요건</h2>
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <div class="bg-bg rounded-3xl p-7"><div class="text-brand text-xs font-extrabold tracking-widest mb-2">소기업</div><div class="text-2xl font-black">연구전담 <span class="text-brand">3명</span> 이상</div></div>
+          <div class="bg-bg rounded-3xl p-7"><div class="text-brand text-xs font-extrabold tracking-widest mb-2">중기업</div><div class="text-2xl font-black">연구전담 <span class="text-brand">5명</span> 이상</div></div>
+          <div class="bg-bg rounded-3xl p-7"><div class="text-brand text-xs font-extrabold tracking-widest mb-2">중견기업</div><div class="text-2xl font-black">연구전담 <span class="text-brand">7명</span> 이상</div></div>
+          <div class="bg-bg rounded-3xl p-7"><div class="text-brand text-xs font-extrabold tracking-widest mb-2">대기업</div><div class="text-2xl font-black">연구전담 <span class="text-brand">10명</span> 이상</div></div>
+        </div>
+        <div class="bg-brand-bg rounded-3xl p-6 text-base">
+          <b class="text-brand">물적 요건</b> · 독립 공간 + 별도 출입문 + 연구설비 구비 + 면적 최소 기준
+        </div>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">전담부서 vs 부설연구소</h2>
+        <div class="bg-bg rounded-3xl overflow-hidden">
+          <table class="w-full text-base">
+            <thead class="bg-ink text-white"><tr><th class="text-left px-6 py-4">구분</th><th class="text-left px-6 py-4">전담부서</th><th class="text-left px-6 py-4">부설연구소</th></tr></thead>
+            <tbody class="bg-white">
+              <tr class="border-t border-line2"><td class="px-6 py-4 font-bold">소기업 인력</td><td class="px-6 py-4">1명</td><td class="px-6 py-4 font-black text-brand">3명</td></tr>
+              <tr class="border-t border-line2"><td class="px-6 py-4 font-bold">독립 공간</td><td class="px-6 py-4">불필요</td><td class="px-6 py-4 font-black text-brand">필수</td></tr>
+              <tr class="border-t border-line2"><td class="px-6 py-4 font-bold">세제 혜택</td><td class="px-6 py-4">동일</td><td class="px-6 py-4">동일</td></tr>
+              <tr class="border-t border-line2"><td class="px-6 py-4 font-bold">병역특례</td><td class="px-6 py-4">제한적</td><td class="px-6 py-4 font-black text-brand">확대</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-3xl font-black">무료 상담</div>
+        <a onclick="go('contact')" class="mt-6 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청 →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 12. ISO 9001 -->
+<section id="iso9001" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · ISO</div>
+      <h1 class="text-h1 lg:text-h1-lg">ISO 9001</h1>
+      <p class="text-body-lg text-sub mt-4">품질경영시스템 · Quality Management System</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-14">
+      <div>
+        <h2 class="text-h2 mb-6">ISO 9001이란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          국제표준화기구(ISO)가 제정한 <b class="text-ink">가장 대표적인 품질경영시스템 규격</b>. 고객 요구사항 충족과 지속적 개선을 체계화합니다. 전 세계 100만 개 이상 기업이 보유.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">주요 적용 조항</h2>
+        <div class="grid md:grid-cols-2 gap-3">
+          <div class="bg-bg rounded-2xl p-5 text-base font-semibold">4. 조직 상황</div>
+          <div class="bg-bg rounded-2xl p-5 text-base font-semibold">5. 리더십</div>
+          <div class="bg-bg rounded-2xl p-5 text-base font-semibold">6. 기획</div>
+          <div class="bg-bg rounded-2xl p-5 text-base font-semibold">7. 지원</div>
+          <div class="bg-bg rounded-2xl p-5 text-base font-semibold">8. 운영</div>
+          <div class="bg-bg rounded-2xl p-5 text-base font-semibold">9. 성과평가</div>
+          <div class="bg-bg rounded-2xl p-5 text-base font-semibold md:col-span-2">10. 개선</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">인증 효과</h2>
+        <ul class="grid md:grid-cols-2 gap-3">
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🏆</span>공공조달·대기업 벤더 등록 필수</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">📈</span>품질 비용 체계적 관리</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🌐</span>수출 시 글로벌 신뢰성</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🎯</span>이노비즈·메인비즈 평가 가점</li>
+        </ul>
+      </div>
+      <div class="bg-ink text-white rounded-4xl p-10">
+        <div class="chip mb-5" style="background: rgba(49,130,246,.2); color: #60A5FA;">PRIME</div>
+        <h3 class="text-h3 text-white mb-5">ISO 컨설팅 · 5단계</h3>
+        <div class="space-y-2 text-base">
+          <div class="bg-white/5 p-4 rounded-xl">① 현황 진단 · GAP 분석</div>
+          <div class="bg-white/5 p-4 rounded-xl">② 매뉴얼·절차서·지침 문서화</div>
+          <div class="bg-white/5 p-4 rounded-xl">③ 내부 교육 · 예비 심사</div>
+          <div class="bg-white/5 p-4 rounded-xl">④ 공인 인증기관 1·2차 심사 대응</div>
+          <div class="bg-white/5 p-4 rounded-xl">⑤ 사후관리·갱신 심사 (3년 주기)</div>
+        </div>
+      </div>
+    </div>
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-3xl font-black">무료 상담</div>
+        <a onclick="go('contact')" class="mt-6 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청 →</a>
+      </div>
+      <div class="bg-bg rounded-3xl p-7 text-base space-y-3">
+        <div class="flex justify-between pb-3 border-b border-line2"><span class="text-sub">유효기간</span><b>3년</b></div>
+        <div class="flex justify-between"><span class="text-sub">갱신</span><b>매년 사후심사</b></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 13. ISO 14001 -->
+<section id="iso14001" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · ISO</div>
+      <h1 class="text-h1 lg:text-h1-lg">ISO 14001</h1>
+      <p class="text-body-lg text-sub mt-4">환경경영시스템 · Environmental Management System</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-14">
+      <div>
+        <h2 class="text-h2 mb-6">ISO 14001이란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          조직의 <b class="text-ink">환경 영향을 체계적으로 관리·개선</b>하기 위한 국제 표준. 에너지·자원·폐기물·배출을 통합 관리. ESG·탄소중립 흐름에서 필수화되고 있습니다.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">인증 효과</h2>
+        <ul class="grid md:grid-cols-2 gap-3">
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🌱</span>ESG 평가 가점</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">💰</span>환경 법규 리스크 감소</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🛒</span>조달·수출 가점 (탄소중립)</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">📊</span>녹색·저탄소 인증 연계</li>
+        </ul>
+      </div>
+      <div class="bg-ink text-white rounded-4xl p-10">
+        <div class="chip mb-5" style="background: rgba(49,130,246,.2); color: #60A5FA;">PRIME TIP</div>
+        <p class="text-body-lg leading-relaxed">ISO 9001과 <b class="text-brand">동시 구축</b> 시 문서·프로세스 중복을 최소화하여 비용이 최대 30% 절감됩니다. 상담 시 통합 인증 검토를 권장드립니다.</p>
+      </div>
+    </div>
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-3xl font-black">무료 상담</div>
+        <a onclick="go('contact')" class="mt-6 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청 →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 14. ISO 45001 -->
+<section id="iso45001" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">CONSULTING · ISO</div>
+      <h1 class="text-h1 lg:text-h1-lg">ISO 45001</h1>
+      <p class="text-body-lg text-sub mt-4">안전보건경영시스템 · OH&S Management System</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2 space-y-14">
+      <div>
+        <h2 class="text-h2 mb-6">ISO 45001이란?</h2>
+        <p class="text-body-lg leading-[1.85] text-ink-2">
+          조직의 <b class="text-ink">안전보건 위험을 체계적으로 식별·관리</b>하는 국제 표준. <b class="text-ink">중대재해처벌법</b> 시행 이후 건설·제조업을 중심으로 수요가 급증하고 있습니다.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-h2 mb-6">인증 효과</h2>
+        <ul class="grid md:grid-cols-2 gap-3">
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">⚖️</span>중대재해처벌법 대응 근거</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">🏗️</span>공공조달·원도급 가점</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">💰</span>산재보험료 할인 가능성</li>
+          <li class="bg-bg rounded-2xl p-5 text-base"><span class="text-xl mr-2">👷</span>재해율 감소 · 생산성 향상</li>
+        </ul>
+      </div>
+      <div class="bg-ink text-white rounded-4xl p-10">
+        <div class="chip mb-5" style="background: rgba(49,130,246,.2); color: #60A5FA;">ISO 3종 통합</div>
+        <p class="text-body-lg leading-relaxed">ISO 9001 / 14001 / 45001을 <b class="text-brand">통합 경영시스템(IMS)</b>으로 구축하면 매뉴얼·내부심사·경영검토가 1회로 단축됩니다. 프라임이 3종 통합 설계·심사까지 원스톱으로 지원합니다.</p>
+      </div>
+    </div>
+    <aside class="space-y-4 lg:sticky lg:top-28 h-fit">
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="text-3xl font-black">무료 상담</div>
+        <a onclick="go('contact')" class="mt-6 block bg-white text-brand text-center font-extrabold py-5 rounded-2xl cursor-pointer text-lg">상담 신청 →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 15. 컨설팅 실적 -->
+<section id="portfolio" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">RESULT · PORTFOLIO</div>
+      <h1 class="text-h1 lg:text-h1-lg">컨설팅 실적</h1>
+      <p class="text-body-lg text-sub mt-4">대표 수행 인증 <b class="text-brand">8건</b> · 누적</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24">
+    <div class="flex flex-wrap gap-2 mb-10">
+      <button class="bg-ink text-white font-bold px-5 py-3 rounded-full text-sm">전체 · 8</button>
+      <button class="bg-bg text-sub font-semibold px-5 py-3 rounded-full text-sm hover:bg-brand-bg hover:text-brand">메인비즈 · 4</button>
+      <button class="bg-bg text-sub font-semibold px-5 py-3 rounded-full text-sm hover:bg-brand-bg hover:text-brand">이노비즈 · 2</button>
+      <button class="bg-bg text-sub font-semibold px-5 py-3 rounded-full text-sm hover:bg-brand-bg hover:text-brand">벤처확인 · 2</button>
+      <button class="bg-bg text-sub font-semibold px-5 py-3 rounded-full text-sm hover:bg-brand-bg hover:text-brand">ISO</button>
+    </div>
+
+    <div class="bg-white border border-line2 rounded-4xl overflow-hidden">
+      <table class="w-full tbl-clean text-base">
+        <thead class="bg-bg">
+          <tr class="text-left text-sm font-bold text-sub">
+            <th class="w-16">No</th>
+            <th>인증 종류</th>
+            <th>업종</th>
+            <th>규모</th>
+            <th>지역</th>
+            <th>연도</th>
+            <th class="text-center">결과</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-line2"><td class="text-sub">8</td><td class="font-bold">메인비즈</td><td>제조업(식품)</td><td class="text-sub">소·중기업</td><td class="text-sub">경기</td><td class="text-sub">2025</td><td class="text-center"><span class="chip-success chip">1회 통과</span></td></tr>
+          <tr class="border-t border-line2"><td class="text-sub">7</td><td class="font-bold">이노비즈</td><td>IT 서비스</td><td class="text-sub">소기업</td><td class="text-sub">서울</td><td class="text-sub">2024</td><td class="text-center"><span class="chip-success chip">1회 통과</span></td></tr>
+          <tr class="border-t border-line2"><td class="text-sub">6</td><td class="font-bold">메인비즈</td><td>유통·도매</td><td class="text-sub">중기업</td><td class="text-sub">서울</td><td class="text-sub">2024</td><td class="text-center"><span class="chip-success chip">1회 통과</span></td></tr>
+          <tr class="border-t border-line2"><td class="text-sub">5</td><td class="font-bold">벤처기업확인</td><td>ICT·플랫폼</td><td class="text-sub">스타트업</td><td class="text-sub">성남</td><td class="text-sub">2024</td><td class="text-center"><span class="chip-success chip">1회 통과</span></td></tr>
+          <tr class="border-t border-line2"><td class="text-sub">4</td><td class="font-bold">메인비즈</td><td>제조업(기계)</td><td class="text-sub">중기업</td><td class="text-sub">인천</td><td class="text-sub">2023</td><td class="text-center"><span class="chip-success chip">1회 통과</span></td></tr>
+          <tr class="border-t border-line2"><td class="text-sub">3</td><td class="font-bold">이노비즈</td><td>SW 개발</td><td class="text-sub">소기업</td><td class="text-sub">서울</td><td class="text-sub">2023</td><td class="text-center"><span class="chip-success chip">1회 통과</span></td></tr>
+          <tr class="border-t border-line2"><td class="text-sub">2</td><td class="font-bold">벤처기업확인</td><td>전자상거래</td><td class="text-sub">스타트업</td><td class="text-sub">서울</td><td class="text-sub">2022</td><td class="text-center"><span class="chip-success chip">1회 통과</span></td></tr>
+          <tr class="border-t border-line2"><td class="text-sub">1</td><td class="font-bold">메인비즈</td><td>제조업(화학)</td><td class="text-sub">중기업</td><td class="text-sub">경기</td><td class="text-sub">2022</td><td class="text-center"><span class="chip-success chip">1회 통과</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-sub mt-6">※ 고객사명은 비밀유지 계약(NDA)에 따라 업종·규모·지역까지만 공개합니다. 세부 레퍼런스는 상담 시 별도 안내.</p>
+  </div>
+</section>
+
+<!-- 16. 고객 후기 -->
+<section id="review" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">RESULT · REVIEW</div>
+      <h1 class="text-h1 lg:text-h1-lg">고객 후기</h1>
+      <p class="text-body-lg text-sub mt-4">프라임과 함께 인증에 성공한 대표님들의 이야기</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24">
+    <div class="flex items-center justify-between mb-10 flex-wrap gap-4">
+      <div class="flex flex-wrap gap-2">
+        <button class="bg-ink text-white font-bold px-5 py-3 rounded-full text-sm">전체</button>
+        <button class="bg-bg text-sub font-semibold px-5 py-3 rounded-full text-sm hover:bg-brand-bg">메인비즈</button>
+        <button class="bg-bg text-sub font-semibold px-5 py-3 rounded-full text-sm hover:bg-brand-bg">이노비즈</button>
+        <button class="bg-bg text-sub font-semibold px-5 py-3 rounded-full text-sm hover:bg-brand-bg">벤처</button>
+        <button class="bg-bg text-sub font-semibold px-5 py-3 rounded-full text-sm hover:bg-brand-bg">ISO</button>
+      </div>
+      <button class="btn-primary text-base cursor-pointer">후기 작성하기 →</button>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-bg rounded-4xl p-8 card-hover">
+        <div class="flex items-center justify-between mb-5">
+          <div class="text-2xl">⭐️⭐️⭐️⭐️⭐️</div>
+          <span class="chip">메인비즈</span>
+        </div>
+        <blockquote class="text-lg font-bold leading-[1.65] mb-8">"자가진단 점수가 너무 안 나와서 포기할까 했는데, 대표님이 3주 만에 체질 개선까지 잡아주셔서 첫 시도 통과했습니다."</blockquote>
+        <div class="text-sm text-sub pt-5 border-t border-line2 flex justify-between">
+          <span>㈜OO제조 · 경기 · CEO 이OO</span><span>2025.10</span>
+        </div>
+      </div>
+      <div class="bg-bg rounded-4xl p-8 card-hover">
+        <div class="flex items-center justify-between mb-5">
+          <div class="text-2xl">⭐️⭐️⭐️⭐️⭐️</div>
+          <span class="chip">이노비즈</span>
+        </div>
+        <blockquote class="text-lg font-bold leading-[1.65] mb-8">"기술 우위가 뭔지 우리 스스로도 정리가 안 됐는데, 컨설팅 받으면서 회사 정체성까지 정리됐습니다. 인증은 덤이었죠."</blockquote>
+        <div class="text-sm text-sub pt-5 border-t border-line2 flex justify-between">
+          <span>㈜OO소프트 · 서울 · CTO 김OO</span><span>2025.08</span>
+        </div>
+      </div>
+      <div class="bg-bg rounded-4xl p-8 card-hover">
+        <div class="flex items-center justify-between mb-5">
+          <div class="text-2xl">⭐️⭐️⭐️⭐️⭐️</div>
+          <span class="chip">벤처확인</span>
+        </div>
+        <blockquote class="text-lg font-bold leading-[1.65] mb-8">"선금·잔금 구조가 투명해서 의심 없이 진행했어요. 다른 업체는 중도금·추가비 요구가 너무 많았거든요."</blockquote>
+        <div class="text-sm text-sub pt-5 border-t border-line2 flex justify-between">
+          <span>㈜OO테크 · 성남 · COO 박OO</span><span>2025.07</span>
+        </div>
+      </div>
+      <div class="bg-bg rounded-4xl p-8 card-hover">
+        <div class="flex items-center justify-between mb-5">
+          <div class="text-2xl">⭐️⭐️⭐️⭐️⭐️</div>
+          <span class="chip">ISO 9001</span>
+        </div>
+        <blockquote class="text-lg font-bold leading-[1.65] mb-8">"ISO가 서류만 정리하는 거라고 생각했는데, 실제 품질 프로세스가 달라졌어요. 공장 직원들도 이해하기 쉽게 만들어주셨습니다."</blockquote>
+        <div class="text-sm text-sub pt-5 border-t border-line2 flex justify-between">
+          <span>㈜OO산업 · 인천 · 품질팀장</span><span>2025.05</span>
+        </div>
+      </div>
+      <div class="bg-bg rounded-4xl p-8 card-hover">
+        <div class="flex items-center justify-between mb-5">
+          <div class="text-2xl">⭐️⭐️⭐️⭐️⭐️</div>
+          <span class="chip">메인비즈</span>
+        </div>
+        <blockquote class="text-lg font-bold leading-[1.65] mb-8">"실사 당일 대표님이 동석해서 심사위원 질문까지 같이 받아주신 게 제일 큰 차이였어요. 혼자였으면 얼어붙었을 겁니다."</blockquote>
+        <div class="text-sm text-sub pt-5 border-t border-line2 flex justify-between">
+          <span>㈜OO푸드 · 서울 · 대표</span><span>2024.12</span>
+        </div>
+      </div>
+      <div class="bg-bg rounded-4xl p-8 card-hover">
+        <div class="flex items-center justify-between mb-5">
+          <div class="text-2xl">⭐️⭐️⭐️⭐️⭐️</div>
+          <span class="chip">벤처확인</span>
+        </div>
+        <blockquote class="text-lg font-bold leading-[1.65] mb-8">"법인세 감면 혜택까지 미리 계산해서 ROI 표로 보여주셔서, 사내 의사결정이 빨라졌습니다."</blockquote>
+        <div class="text-sm text-sub pt-5 border-t border-line2 flex justify-between">
+          <span>㈜OO AI · 성남 · CFO</span><span>2024.09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center gap-2 mt-16">
+      <button class="w-11 h-11 grid place-items-center bg-ink text-white font-bold rounded-xl">1</button>
+      <button class="w-11 h-11 grid place-items-center bg-bg text-sub font-semibold rounded-xl">2</button>
+      <button class="w-11 h-11 grid place-items-center bg-bg text-sub font-semibold rounded-xl">3</button>
+      <button class="w-11 h-11 grid place-items-center bg-bg text-sub font-semibold rounded-xl">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- 17. 인증 소식 -->
+<section id="news" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">RESULT · NEWS</div>
+      <h1 class="text-h1 lg:text-h1-lg">인증 소식</h1>
+      <p class="text-body-lg text-sub mt-4">고객사 인증 취득 축하 · 제도 변경 안내</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24">
+    <div class="space-y-3">
+      <article class="bg-bg rounded-3xl p-7 flex gap-6 items-start card-hover cursor-pointer">
+        <div class="w-24 flex-shrink-0 text-center">
+          <div class="text-brand text-sm font-extrabold">2025</div>
+          <div class="text-[32px] font-black tracking-tight text-ink leading-none mt-1">10.15</div>
+        </div>
+        <div class="flex-1">
+          <span class="chip">축하</span>
+          <h3 class="font-extrabold text-xl mt-3">㈜OO제조 메인비즈 인증 취득을 축하드립니다</h3>
+          <p class="text-sub mt-2 leading-relaxed">경기도 제조업체 OO식품이 메인비즈 인증을 첫 시도에 통과했습니다...</p>
+        </div>
+      </article>
+      <article class="bg-bg rounded-3xl p-7 flex gap-6 items-start card-hover cursor-pointer">
+        <div class="w-24 flex-shrink-0 text-center">
+          <div class="text-brand text-sm font-extrabold">2025</div>
+          <div class="text-[32px] font-black tracking-tight text-ink leading-none mt-1">09.28</div>
+        </div>
+        <div class="flex-1">
+          <span class="chip chip-gray">제도변경</span>
+          <h3 class="font-extrabold text-xl mt-3">2026년 벤처기업확인 평가 기준 개정 예고</h3>
+          <p class="text-sub mt-2 leading-relaxed">중기부가 2026년 1월부터 적용될 벤처확인 평가 기준을 일부 개정할 예정입니다...</p>
+        </div>
+      </article>
+      <article class="bg-bg rounded-3xl p-7 flex gap-6 items-start card-hover cursor-pointer">
+        <div class="w-24 flex-shrink-0 text-center">
+          <div class="text-brand text-sm font-extrabold">2025</div>
+          <div class="text-[32px] font-black tracking-tight text-ink leading-none mt-1">08.12</div>
+        </div>
+        <div class="flex-1">
+          <span class="chip">축하</span>
+          <h3 class="font-extrabold text-xl mt-3">㈜OO소프트 이노비즈 인증 취득</h3>
+          <p class="text-sub mt-2 leading-relaxed">서울 소재 IT 기업 OO소프트가 이노비즈 인증에 첫 시도로 통과했습니다...</p>
+        </div>
+      </article>
+      <article class="bg-bg rounded-3xl p-7 flex gap-6 items-start card-hover cursor-pointer">
+        <div class="w-24 flex-shrink-0 text-center">
+          <div class="text-brand text-sm font-extrabold">2025</div>
+          <div class="text-[32px] font-black tracking-tight text-ink leading-none mt-1">07.05</div>
+        </div>
+        <div class="flex-1">
+          <span class="chip chip-gray">칼럼</span>
+          <h3 class="font-extrabold text-xl mt-3">[대표 칼럼] 메인비즈 자가진단 600점을 만드는 3가지 포인트</h3>
+          <p class="text-sub mt-2 leading-relaxed">대표가 직접 4건의 메인비즈를 수행하며 확인한 공통 패턴...</p>
+        </div>
+      </article>
+      <article class="bg-bg rounded-3xl p-7 flex gap-6 items-start card-hover cursor-pointer">
+        <div class="w-24 flex-shrink-0 text-center">
+          <div class="text-brand text-sm font-extrabold">2025</div>
+          <div class="text-[32px] font-black tracking-tight text-ink leading-none mt-1">05.01</div>
+        </div>
+        <div class="flex-1">
+          <span class="chip">공지</span>
+          <h3 class="font-extrabold text-xl mt-3">프라임경영인증연구원 공식 개업 안내</h3>
+          <p class="text-sub mt-2 leading-relaxed">2026년 5월, 프라임경영인증연구원이 정식 개업합니다...</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 18. 상담문의 -->
+<section id="contact" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">SUPPORT · CONTACT</div>
+      <h1 class="text-h1 lg:text-h1-lg">상담문의</h1>
+      <p class="text-body-lg text-sub mt-4">대표가 직접 <b class="text-ink">24시간 이내</b> 연락드립니다.</p>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24 grid lg:grid-cols-5 gap-10">
+    <!-- 좌측 프로세스 -->
+    <div class="lg:col-span-2 space-y-5">
+      <div class="bg-bg rounded-4xl p-8">
+        <div class="chip mb-6">6단계 프로세스</div>
+        <ol class="space-y-4">
+          <li class="flex gap-4"><span class="w-8 h-8 bg-ink text-white rounded-xl grid place-items-center text-sm font-black flex-shrink-0">1</span><div><div class="font-bold">상담 신청</div><div class="text-sub text-sm mt-0.5">폼·전화·카톡 중 선택</div></div></li>
+          <li class="flex gap-4"><span class="w-8 h-8 bg-ink text-white rounded-xl grid place-items-center text-sm font-black flex-shrink-0">2</span><div><div class="font-bold">대표 직접 상담 · 30분~</div><div class="text-sub text-sm mt-0.5">무료 · 사전 예약제</div></div></li>
+          <li class="flex gap-4"><span class="w-8 h-8 bg-ink text-white rounded-xl grid place-items-center text-sm font-black flex-shrink-0">3</span><div><div class="font-bold">맞춤 견적 서면 발송</div><div class="text-sub text-sm mt-0.5">당일 이내</div></div></li>
+          <li class="flex gap-4"><span class="w-8 h-8 bg-brand text-white rounded-xl grid place-items-center text-sm font-black flex-shrink-0">4</span><div><div class="font-bold">계약 체결 · 선금 50%</div><div class="text-sub text-sm mt-0.5">착수일 확정</div></div></li>
+          <li class="flex gap-4"><span class="w-8 h-8 bg-ink text-white rounded-xl grid place-items-center text-sm font-black flex-shrink-0">5</span><div><div class="font-bold">컨설팅 진행</div><div class="text-sub text-sm mt-0.5">자가진단·서류·현장실사</div></div></li>
+          <li class="flex gap-4"><span class="w-8 h-8 bg-brand text-white rounded-xl grid place-items-center text-sm font-black flex-shrink-0">6</span><div><div class="font-bold">인증서 발급 · 잔금 50%</div><div class="text-sub text-sm mt-0.5">발급 확인 후 결제</div></div></li>
+        </ol>
+      </div>
+      <div class="bg-brand text-white rounded-4xl p-8">
+        <div class="chip mb-5" style="background: rgba(255,255,255,.2); color: white;">📞 즉시 연결</div>
+        <div class="space-y-4 text-base">
+          <div class="flex justify-between items-center pb-4 border-b border-white/15"><span class="text-white/80">대표 직통</span><b class="text-lg">02-XXXX-XXXX</b></div>
+          <div class="flex justify-between items-center pb-4 border-b border-white/15"><span class="text-white/80">카카오톡</span><b class="text-lg">@프라임경영인증</b></div>
+          <div class="flex justify-between items-center"><span class="text-white/80">이메일</span><b class="text-base">contact@primemci.co.kr</b></div>
+        </div>
+        <div class="text-sm text-white/70 mt-5">영업시간 평일 09:00~18:00</div>
+      </div>
+    </div>
+
+    <!-- 우측 폼 -->
+    <form onsubmit="event.preventDefault(); alert('데모: 실제 제출은 아임웹 연동 후 작동합니다.');" class="lg:col-span-3 bg-white border border-line2 rounded-4xl p-10 space-y-6 shadow-soft">
+      <div class="chip">상담 신청 폼</div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-bold mb-2">회사/단체명 <span class="text-warn">*</span></label>
+          <input type="text" required class="w-full bg-bg rounded-xl px-5 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand" placeholder="㈜프라임" />
+        </div>
+        <div>
+          <label class="block text-sm font-bold mb-2">대표자 성함 <span class="text-warn">*</span></label>
+          <input type="text" required class="w-full bg-bg rounded-xl px-5 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand" placeholder="홍길동" />
+        </div>
+        <div>
+          <label class="block text-sm font-bold mb-2">연락처 <span class="text-warn">*</span></label>
+          <input type="tel" required class="w-full bg-bg rounded-xl px-5 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand" placeholder="010-0000-0000" />
+        </div>
+        <div>
+          <label class="block text-sm font-bold mb-2">이메일 <span class="text-warn">*</span></label>
+          <input type="email" required class="w-full bg-bg rounded-xl px-5 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand" placeholder="ceo@company.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-bold mb-2">직책</label>
+          <input type="text" class="w-full bg-bg rounded-xl px-5 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand" placeholder="대표이사" />
+        </div>
+        <div>
+          <label class="block text-sm font-bold mb-2">임직원 수</label>
+          <select class="w-full bg-bg rounded-xl px-5 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand">
+            <option>선택</option><option>1~10명</option><option>11~50명</option><option>51~100명</option><option>100명 이상</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-bold mb-3">관심 인증 <span class="text-warn">*</span> <span class="text-sub font-normal">· 복수 선택 가능</span></label>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> 메인비즈</label>
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> 이노비즈</label>
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> 벤처기업확인</label>
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> 직접생산확인</label>
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> 연구개발전담부서</label>
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> 기업부설연구소</label>
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> ISO 9001</label>
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> ISO 14001</label>
+          <label class="flex items-center gap-2 bg-bg hover:bg-brand-bg rounded-xl p-4 cursor-pointer text-sm font-semibold"><input type="checkbox"/> ISO 45001</label>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-bold mb-2">상담 희망 시간</label>
+        <select class="w-full bg-bg rounded-xl px-5 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand">
+          <option>협의 후 결정</option><option>오전 (09~12시)</option><option>오후 (13~17시)</option><option>저녁 (17~19시)</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm font-bold mb-2">문의 내용 <span class="text-warn">*</span></label>
+        <textarea required rows="5" class="w-full bg-bg rounded-xl px-5 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand resize-none" placeholder="현재 상황, 필요 인증, 희망 일정 등을 간단히 적어주시면 상담이 빨라집니다."></textarea>
+      </div>
+
+      <div>
+        <label class="block text-sm font-bold mb-2">파일 첨부 <span class="text-sub font-normal">· 선택 · 최대 10MB</span></label>
+        <input type="file" class="w-full bg-bg rounded-xl px-5 py-4 text-base" />
+      </div>
+
+      <label class="flex items-start gap-3 bg-bg p-5 rounded-2xl cursor-pointer">
+        <input type="checkbox" required class="mt-1"/>
+        <span class="text-sm"><b class="text-ink">개인정보 수집·이용 동의</b> · 필수<br/>
+        <span class="text-sub">수집 항목 : 회사명, 이름, 연락처, 이메일, 직책, 문의 내용 · 이용 목적 : 상담 응대 · 보유 기간 : 3년</span></span>
+      </label>
+
+      <button type="submit" class="w-full btn-primary justify-center text-xl py-6 cursor-pointer">상담 신청하기 →</button>
+    </form>
+  </div>
+</section>
+
+<!-- 19. FAQ -->
+<section id="faq" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">SUPPORT · FAQ</div>
+      <h1 class="text-h1 lg:text-h1-lg">자주 묻는 질문</h1>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-6 py-24 space-y-3">
+    <details class="bg-bg rounded-3xl p-7 group" open>
+      <summary class="font-extrabold text-xl cursor-pointer flex justify-between items-center gap-4"><span>Q. 컨설팅 비용은 얼마인가요?</span><span class="chev text-brand font-black">▼</span></summary>
+      <p class="text-sub mt-5 leading-relaxed text-lg">인증 종류·기업 규모·준비도에 따라 상이합니다. <b class="text-ink">무료 상담 후 서면 견적</b>을 드리며, 중도금·추가비 없이 <b class="text-ink">선금 50% / 잔금 50%</b> 구조로 고정됩니다.</p>
+    </details>
+    <details class="bg-bg rounded-3xl p-7">
+      <summary class="font-extrabold text-xl cursor-pointer flex justify-between items-center gap-4"><span>Q. 불합격하면 환불되나요?</span><span class="chev text-brand font-black">▼</span></summary>
+      <p class="text-sub mt-5 leading-relaxed text-lg">불합격 시 <b class="text-ink">무료 보완·재심사 대응</b>을 원칙으로 합니다. 추가 비용 청구 없습니다. 재심사 후에도 불합격이 확정되는 예외 상황은 계약서에 별도 조항으로 명시됩니다.</p>
+    </details>
+    <details class="bg-bg rounded-3xl p-7">
+      <summary class="font-extrabold text-xl cursor-pointer flex justify-between items-center gap-4"><span>Q. 한 번에 여러 인증을 받고 싶어요.</span><span class="chev text-brand font-black">▼</span></summary>
+      <p class="text-sub mt-5 leading-relaxed text-lg">가능합니다. 특히 <b class="text-ink">ISO 9001 / 14001 / 45001 통합 인증</b>, <b class="text-ink">연구개발전담부서 + 벤처확인 연구개발유형 패키지</b>는 비용·시간이 크게 절감됩니다.</p>
+    </details>
+    <details class="bg-bg rounded-3xl p-7">
+      <summary class="font-extrabold text-xl cursor-pointer flex justify-between items-center gap-4"><span>Q. 업력 3년이 안 되는데 메인비즈 가능한가요?</span><span class="chev text-brand font-black">▼</span></summary>
+      <p class="text-sub mt-5 leading-relaxed text-lg">메인비즈는 업력 3년 이상이 필수입니다. 대신 <b class="text-ink">벤처기업확인</b>이나 <b class="text-ink">이노비즈</b>가 대안이 될 수 있으니 상담 때 함께 검토드립니다.</p>
+    </details>
+    <details class="bg-bg rounded-3xl p-7">
+      <summary class="font-extrabold text-xl cursor-pointer flex justify-between items-center gap-4"><span>Q. 지방 소재 기업도 컨설팅 받을 수 있나요?</span><span class="chev text-brand font-black">▼</span></summary>
+      <p class="text-sub mt-5 leading-relaxed text-lg">전국 지원합니다. 서류·온라인 작업은 원격으로 진행하고, <b class="text-ink">현장실사 당일만 방문</b>하여 동석합니다. 지방 출장비는 견적에 사전 포함됩니다.</p>
+    </details>
+    <details class="bg-bg rounded-3xl p-7">
+      <summary class="font-extrabold text-xl cursor-pointer flex justify-between items-center gap-4"><span>Q. 기존에 불합격했던 기업인데 재도전 가능할까요?</span><span class="chev text-brand font-black">▼</span></summary>
+      <p class="text-sub mt-5 leading-relaxed text-lg">사전 진단을 통해 <b class="text-ink">불합격 사유 분석</b>부터 시작합니다. 원인이 체질 문제면 개선 플랜부터, 서류 미비면 재작성부터 진행합니다.</p>
+    </details>
+    <details class="bg-bg rounded-3xl p-7">
+      <summary class="font-extrabold text-xl cursor-pointer flex justify-between items-center gap-4"><span>Q. 계약서는 어떤 형식인가요?</span><span class="chev text-brand font-black">▼</span></summary>
+      <p class="text-sub mt-5 leading-relaxed text-lg">표준 용역(컨설팅)계약서 + 인증 유형별 특약으로 구성됩니다. 업무 범위·대금·불합격 처리·비밀유지·지체 책임까지 <b class="text-ink">모두 서면 명시</b>됩니다.</p>
+    </details>
+    <details class="bg-bg rounded-3xl p-7">
+      <summary class="font-extrabold text-xl cursor-pointer flex justify-between items-center gap-4"><span>Q. 상담은 유료인가요?</span><span class="chev text-brand font-black">▼</span></summary>
+      <p class="text-sub mt-5 leading-relaxed text-lg">첫 상담(최대 60분)은 <b class="text-ink">무료</b>입니다. 대표 직접 응대이며 온·오프라인 모두 가능합니다.</p>
+    </details>
+  </div>
+</section>
+
+<!-- 20. 공지사항 -->
+<section id="notice" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">SUPPORT · NOTICE</div>
+      <h1 class="text-h1 lg:text-h1-lg">공지사항</h1>
+    </div>
+  </div>
+  <div class="max-w-content mx-auto px-6 py-24">
+    <div class="bg-white border border-line2 rounded-4xl overflow-hidden">
+      <table class="w-full tbl-clean text-base">
+        <thead class="bg-bg"><tr class="text-left text-sm font-bold text-sub"><th class="w-24">No</th><th>제목</th><th class="w-32">작성일</th><th class="text-center w-20">조회</th></tr></thead>
+        <tbody>
+          <tr class="border-t border-line2 hover:bg-bg cursor-pointer"><td><span class="chip">공지</span></td><td class="font-bold">프라임경영인증연구원 정식 개업 안내</td><td class="text-sub">2026.05.01</td><td class="text-center text-sub">—</td></tr>
+          <tr class="border-t border-line2 hover:bg-bg cursor-pointer"><td class="text-sub">5</td><td>2026년 벤처기업확인 평가 기준 개정 예고</td><td class="text-sub">2026.04.20</td><td class="text-center text-sub">—</td></tr>
+          <tr class="border-t border-line2 hover:bg-bg cursor-pointer"><td class="text-sub">4</td><td>ISO 45001 통합 컨설팅 런칭 안내</td><td class="text-sub">2026.04.10</td><td class="text-center text-sub">—</td></tr>
+          <tr class="border-t border-line2 hover:bg-bg cursor-pointer"><td class="text-sub">3</td><td>카카오톡 플러스친구 오픈 안내</td><td class="text-sub">2026.03.28</td><td class="text-center text-sub">—</td></tr>
+          <tr class="border-t border-line2 hover:bg-bg cursor-pointer"><td class="text-sub">2</td><td>네이버 블로그·유튜브 채널 개설</td><td class="text-sub">2026.03.15</td><td class="text-center text-sub">—</td></tr>
+          <tr class="border-t border-line2 hover:bg-bg cursor-pointer"><td class="text-sub">1</td><td>홈페이지 정식 오픈</td><td class="text-sub">2026.03.01</td><td class="text-center text-sub">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 21. 회사소개서 다운로드 -->
+<section id="download" class="page">
+  <div class="gradient-bg">
+    <div class="max-w-content mx-auto px-6 pt-20 pb-16">
+      <div class="chip chip-gray mb-5">SUPPORT · DOWNLOAD</div>
+      <h1 class="text-h1 lg:text-h1-lg">회사소개서</h1>
+      <p class="text-body-lg text-sub mt-4">의사결정에 필요한 모든 내용을 한 파일로.</p>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-6 py-24">
+    <div class="bg-bg rounded-5xl p-12 lg:p-16 text-center">
+      <div class="w-24 h-24 bg-brand text-white rounded-3xl grid place-items-center text-3xl font-black mx-auto mb-8">PDF</div>
+      <h2 class="text-[32px] lg:text-[40px] font-extrabold mb-4 tracking-tight">프라임경영인증연구원 회사소개서 v1.0</h2>
+      <p class="text-body-lg text-sub leading-relaxed mb-8 max-w-2xl mx-auto">대표 프로필, 컨설팅 실적, 거래 프로세스, 서비스 요금, 주요 계약 조건까지 16페이지로 정리했습니다.</p>
+      <div class="inline-flex items-center gap-3 text-sm text-sub bg-white px-5 py-2.5 rounded-full mb-10 font-semibold">
+        <span>📄 16페이지</span><span>·</span><span>4.2MB</span><span>·</span><span>최종 2026.05</span>
+      </div>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a class="btn-primary text-lg cursor-pointer shadow-floating">📥 PDF 다운로드</a>
+        <a onclick="go('contact')" class="btn-ghost text-lg cursor-pointer">📧 이메일로 받기</a>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-white border border-line2 rounded-4xl p-10">
+      <div class="chip mb-6">소개서 목차</div>
+      <ol class="grid md:grid-cols-2 gap-x-8 gap-y-3 text-base list-decimal pl-5 text-ink-2">
+        <li>대표 인사말</li><li>프라임 브랜드스토리</li>
+        <li>대표 프로필 & 수행 실적</li><li>컨설팅 분야 9종</li>
+        <li>6단계 거래 프로세스</li><li>프라임의 3가지 약속</li>
+        <li>인증 유형별 세부 안내</li><li>비용·기간 안내</li>
+        <li>고객 후기 발췌</li><li>자주 묻는 질문</li>
+        <li>계약 조건 요약</li><li>연락처 & 오시는 길</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="bg-ink text-white/70">
+  <div class="max-w-content mx-auto px-6 py-20 grid md:grid-cols-4 gap-10">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2.5 mb-5">
+        <div class="w-10 h-10 bg-brand rounded-xl grid place-items-center">
+          <span class="text-white font-black text-xl leading-none">P</span>
+        </div>
+        <div>
+          <div class="font-extrabold text-white text-[17px]">프라임경영인증연구원</div>
+          <div class="text-[11px] tracking-widest text-brand font-bold">PRIME MCI</div>
+        </div>
+      </div>
+      <p class="text-white/60 leading-relaxed text-base">
+        대표가 직접 설계하는 경영인증 밀착 컨설팅.<br/>
+        메인비즈·이노비즈·벤처·ISO 3종, 좁고 깊게 특화합니다.
+      </p>
+      <div class="flex gap-2 mt-6">
+        <a class="w-10 h-10 bg-white/10 hover:bg-brand rounded-xl grid place-items-center cursor-pointer font-bold transition">K</a>
+        <a class="w-10 h-10 bg-white/10 hover:bg-brand rounded-xl grid place-items-center cursor-pointer font-bold transition">N</a>
+        <a class="w-10 h-10 bg-white/10 hover:bg-brand rounded-xl grid place-items-center cursor-pointer font-bold transition">Y</a>
+      </div>
+    </div>
+    <div>
+      <div class="text-brand font-extrabold mb-4 text-xs tracking-widest">CONTACT</div>
+      <div class="space-y-2 text-base">
+        <div>주소 · TBD</div>
+        <div>전화 · TBD</div>
+        <div>contact@primemci.co.kr</div>
+        <div class="text-sm text-white/50">평일 09:00~18:00</div>
+      </div>
+    </div>
+    <div>
+      <div class="text-brand font-extrabold mb-4 text-xs tracking-widest">INFO</div>
+      <div class="space-y-2 text-base">
+        <div>사업자등록번호 · TBD</div>
+        <div>대표 · 김지훈</div>
+        <div class="flex gap-4 mt-4 text-sm">
+          <a class="hover:text-white cursor-pointer">개인정보처리방침</a>
+          <a class="hover:text-white cursor-pointer">이용약관</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-content mx-auto px-6 py-6 text-sm text-white/40 flex justify-between items-center flex-wrap gap-2">
+      <span>© 2026 PRIME Management Certification Institute.</span>
+      <span>※ 프로토타입 · 일부 수치는 데모 데이터.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Quick FAB -->
+<div class="fixed right-6 bottom-6 flex flex-col gap-3 z-40">
+  <a onclick="go('contact')" class="w-16 h-16 rounded-full bg-brand hover:bg-brand-dark grid place-items-center shadow-floating cursor-pointer transition" title="상담 신청">
+    <span class="text-white font-extrabold text-xs leading-tight text-center">상담<br/>신청</span>
+  </a>
+  <a class="w-16 h-16 rounded-full bg-[#FAE100] hover:brightness-95 grid place-items-center shadow-lg cursor-pointer transition" title="카카오톡">
+    <span class="text-[#3C1E1E] font-black text-lg">K</span>
+  </a>
+</div>
+
+<script>
+  function go(pageId){
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById(pageId);
+    if (target) target.classList.add('active');
+    window.scrollTo({top:0, behavior:'instant'});
+    document.activeElement && document.activeElement.blur();
+    history.replaceState(null, '', '#' + pageId);
+  }
+  window.addEventListener('load', () => {
+    const hash = location.hash.replace('#','');
+    if (hash && document.getElementById(hash)) go(hash);
+  });
+</script>
+
+</body>
+</html>
